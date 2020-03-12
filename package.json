@@ -1,0 +1,23 @@
+{
+  "name": "ctc_sites",
+  "version": "1.0.0",
+  "description": "course page",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vwls/ctc_sites.git"
+  },
+  "author": "fletcher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vwls/ctc_sites/issues"
+  },
+  "homepage": "https://github.com/vwls/ctc_sites#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
