@@ -2,11 +2,164 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>CTC Course Page</title>
+    <title>the artist is not present</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
     <link rel="stylesheet" type="text/css" href="/public/assets/style.css">
   </head>
   <body>
-    <h2>Home</h2>
-    <p>this is the home page</p>
+    <h2>Gallery NON-LIEUX</h2>
+    <p>the artist is not present</p>
+
+    <div id="canvasContainer">
+	    <div id="p5sketch0" class="p5Canvas"></div>
+	    <div id="p5sketch1" class="p5Canvas"></div>
+	    <div id="p5sketch2" class="p5Canvas"></div>
+    </div>
+
+    <script>
+    const s0 = ( sketch ) => {
+
+    	let dashDist = [5, 5];
+
+		let x;
+		let y;
+		let px;
+		let py;
+		let magnitude = 5;
+	    		
+    	sketch.setup = () => {
+    		sketch.createCanvas(300, 300);
+    		sketch.background(255);
+			sketch.stroke(0, 0, 255);
+			
+			x = sketch.width/2;
+			y = sketch.height/2;
+
+			// Canvas boundaries
+			sketch.drawingContext.setLineDash(dashDist);
+			sketch.rect(0, 0, sketch.width, sketch.height);
+			// Reset to non-dashed line
+			sketch.drawingContext.setLineDash([0, 0]);
+    	}
+
+    	sketch.draw = () => {
+		    px = x;
+			py = y;
+
+			x += sketch.random(magnitude * -1, magnitude);
+			y += sketch.random(magnitude * -1, magnitude);
+
+			sketch.line(px, py, x, y);
+
+			
+		};
+
+		// sketch.mouseReleased = () => {
+		//     sketch.background(255);
+  // 			x = sketch.width/2;
+  // 			y = sketch.height/2;	
+		// };
+    };
+
+    //let myp5_0 = new p5(s0);
+    let myp5_0 = new p5(s0, 'p5sketch0');
+
+    </script>
+
+    <script>
+    const s1 = ( sketch ) => {
+
+    	let dashDist = [5, 5];
+
+		let x;
+		let y;
+		let px;
+		let py;
+		let magnitude = 15;
+	    		
+    	sketch.setup = () => {
+    		sketch.createCanvas(300, 300);
+    		sketch.background(255);
+			sketch.stroke(0, 0, 255);
+			
+			x = sketch.width/2;
+			y = sketch.height/2;
+
+			// Canvas boundaries
+			sketch.drawingContext.setLineDash(dashDist);
+			sketch.rect(0, 0, sketch.width, sketch.height);
+			// Reset to non-dashed line
+			sketch.drawingContext.setLineDash([0, 0]);
+
+    	}
+
+    	sketch.draw = () => {
+		    px = x;
+			py = y;
+
+			x += sketch.random(magnitude * -1, magnitude);
+			y += sketch.random(magnitude * -1, magnitude);
+
+			sketch.line(px, py, x, y);
+		};
+    };
+
+    //let myp5_1 = new p5(s1);
+    let myp5_1 = new p5(s1, 'p5sketch1');
+    </script>
+
+    <script>
+    const s2 = ( sketch ) => {
+
+    	let dashDist = [5, 5];
+
+		let x;
+		let y;
+		let px;
+		let py;
+		let magnitude = 30;
+	    		
+    	sketch.setup = () => {
+    		sketch.createCanvas(300, 300);
+    		sketch.background(255);
+			sketch.stroke(0, 0, 255);
+			
+			x = sketch.width/2;
+			y = sketch.height/2;
+
+			// Canvas boundaries
+			sketch.drawingContext.setLineDash(dashDist);
+			sketch.rect(0, 0, sketch.width, sketch.height);
+			// Reset to non-dashed line
+			sketch.drawingContext.setLineDash([0, 0]);
+
+    	}
+
+    	sketch.draw = () => {
+		    px = x;
+			py = y;
+
+			x += sketch.random(magnitude * -1, magnitude);
+			y += sketch.random(magnitude * -1, magnitude);
+
+			sketch.line(px, py, x, y);
+		};
+    };
+
+    //let myp5_2 = new p5(s2);
+    let myp5_2 = new p5(s2, 'p5sketch2');
+    </script>
+
+    <div id="navContainer">
+	    <p class="navItem"><a href="/about">ABOUT</a></p>
+	    <p class="navItem"><a href="/ctc1000">RISD:CTC-1000</a></p>
+	    <p class="navItem"><a href="/ctc3002">RISD:CTC-3002</a></p>
+	    <!-- <p class="navItem"><a href="/shows">shows</a></p> -->
+	    <!-- <p class="navItem"><a href="/archive">archive</a></p> -->
+	    <!-- <p class="navItem"><a href="/week6">week 6</a></p> -->
+    </div>
+    
+
   </body>
 </html>

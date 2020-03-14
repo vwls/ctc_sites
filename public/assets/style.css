@@ -1,3 +1,29 @@
 body {
-	background: grey;
+	font-family: 'Inconsolata', monospace;
+	background: white;
+	color: rgb(0, 0, 255);
 }
+
+#canvasContainer {
+	width: 100%;
+}
+
+#navContainer {
+	width: 100%;
+}
+
+.navItem {
+	display: inline-block;
+	margin: 5px;
+	margin-top: 10px;
+}
+
+.navItem a {
+	text-decoration: none;
+}
+
+.p5Canvas {
+	margin: 0px;
+	display: inline-block;
+}
+

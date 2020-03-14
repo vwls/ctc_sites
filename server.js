@@ -27,8 +27,28 @@ app.get('/', function (req, res) {
   res.render('home');
 })
 
-app.get('/week6', function (req, res) {
-  res.render('week6');
+app.get('/shows', function (req, res) {
+  res.render('shows');
+})
+
+app.get('/archive', function (req, res) {
+  res.render('archive');
+})
+
+app.get('/about', function (req, res) {
+  res.render('about');
+})
+
+app.get('/theartistisnotpresent', function (req, res) {
+  res.render('theartistisnotpresent');
+})
+
+app.get('/ctc1000', function (req, res) {
+  res.render('ctc1000');
+})
+
+app.get('/ctc3002', function (req, res) {
+  res.render('ctc3002');
 })
 
 
