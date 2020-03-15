@@ -4,10 +4,62 @@
     <meta charset="utf-8">
     <title>ctc-1000</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/public/assets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="/views/assets/style.css">
   </head>
   <body>
+  	<h1><a style="text-decoration:none" href="/">NON-LIEUX</a></h1>
     <h2>CTC-1000</h2>
     <p>Computation, Technology, and Culture: Introduction to Computation</p>
+
+    <div class="canvasContainer">
+	    <div id="p5sketch0" class="p5Canvas"></div>
+	    <div id="p5sketch1" class="p5Canvas"></div>
+	    <div id="p5sketch2" class="p5Canvas"></div>
+    </div>
+
+    <!-- FIRST CANVAS -->
+    <script>
+    // This block of code creates a canvas element that contains
+    // a grayscale live video capture
+    const s0 = ( sketch ) => {
+
+    	let capture;
+
+    	let dashDist = [5, 5];
+	    		
+    	sketch.setup = () => {
+    		sketch.createCanvas(300, 300);
+    		sketch.background(255);
+			sketch.stroke(0, 0, 255);
+
+			capture = sketch.createCapture(sketch.VIDEO);
+  			capture.hide();
+
+
+			// Canvas boundaries
+			//sketch.drawingContext.setLineDash(dashDist);
+			//sketch.rect(0, 0, sketch.width, sketch.height);
+
+			// Reset to non-dashed line
+			//sketch.drawingContext.setLineDash([0, 0]);
+    	}
+
+    	sketch.draw = () => {
+
+    		//sketch.image(capture, 0, 0, sketch.width, sketch.width * capture.height / capture.width);
+    		sketch.image(capture, 0, 0, sketch.width, 300);
+  			sketch.filter(sketch.GRAY);
+    	
+		};
+    };
+
+    let myp5_0 = new p5(s0, 'p5sketch0');
+
+    </script>
+
+ 
+
+
   </body>
 </html>

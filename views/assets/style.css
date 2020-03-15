@@ -4,21 +4,12 @@ body {
 	color: rgb(0, 0, 255);
 }
 
-h1{
-	text-decoration: none;
-	color: rgb(0, 0, 255);
-}
-
-.canvasContainer {
+#canvasContainer {
 	width: 100%;
 }
 
 #navContainer {
 	width: 100%;
-}
-
-a {
-	color: rgb(0, 0, 255);
 }
 
 .navItem {
@@ -29,13 +20,10 @@ a {
 
 .navItem a {
 	text-decoration: none;
-	color: rgb(0, 0, 255);
 }
 
 .p5Canvas {
 	margin: 0px;
 	display: inline-block;
 }
-
-
 

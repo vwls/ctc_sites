@@ -10,7 +10,8 @@ const bodyParser = require('body-parser');
 app.use( bodyParser.json() );
 app.use( bodyParser.urlencoded({ extended: true }) );
 
-app.use('/public', express.static('public'));
+//app.use('/public', express.static('public'));
+app.use('/views', express.static('views'));
 app.set('view engine', 'ejs');
 
 app.listen(port, () => console.log(`App listening on port ${port}`));
