@@ -24,6 +24,13 @@ body {
 
 .p5Canvas {
 	margin: 0px;
+	margin-bottom: 10px;
 	display: inline-block;
+	/*border: 0.5px solid;
+	border-color: rgb(0, 0, 255);*/
+}
+
+.msg404 {
+
 }
 
