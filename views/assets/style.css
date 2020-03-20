@@ -4,6 +4,10 @@ body {
 	color: rgb(0, 0, 255);
 }
 
+h1 {
+	margin: 0px;
+}
+
 #canvasContainer {
 	width: 100%;
 }

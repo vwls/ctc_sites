@@ -48,23 +48,16 @@
         		sketch.background(255);
     			sketch.stroke(0, 0, 255);
 
-    			capture = sketch.createCapture(sketch.VIDEO);
-      			capture.hide();
-
-
-    			// Canvas boundaries
-    			//sketch.drawingContext.setLineDash(dashDist);
-    			//sketch.rect(0, 0, sketch.width, sketch.height);
-
-    			// Reset to non-dashed line
-    			//sketch.drawingContext.setLineDash([0, 0]);
+    			//capture = sketch.createCapture(sketch.VIDEO);
+      			//capture.hide();
         	}
 
         	sketch.draw = () => {
 
         		//sketch.image(capture, 0, 0, sketch.width, sketch.width * capture.height / capture.width);
-        		sketch.image(capture, 0, 0, sketch.width, 300);
-      			sketch.filter(sketch.GRAY);
+        		
+                //sketch.image(capture, 0, 0, sketch.width, 300);
+      			//sketch.filter(sketch.GRAY);
         	
     		};
         };
@@ -73,7 +66,14 @@
 
         </script>
 
-
+        <div id="navContainer">
+            <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/about">ABOUT</a></p>
+            <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc1000">RISD:CTC-1000</a></p>
+            <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc3002">RISD:CTC-3002</a></p>
+            <!-- <p class="navItem"><a href="/shows">shows</a></p> -->
+            <!-- <p class="navItem"><a href="/archive">archive</a></p> -->
+            <!-- <p class="navItem"><a href="/week6">week 6</a></p> -->
+        </div>
     </div>
   </body>
 </html>
