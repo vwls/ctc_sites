@@ -10,9 +10,7 @@ const bodyParser = require('body-parser');
 app.use( bodyParser.json() );
 app.use( bodyParser.urlencoded({ extended: true }) );
 
-
-app.use('/views', express.static('views')); //this one works
-//app.use(express.static(__dirname + 'views'));
+app.use('/views', express.static('views'));
 app.use('/assets', express.static('views/assets/images'));
 
 app.set('view engine', 'ejs');
@@ -20,8 +18,9 @@ app.set('view engine', 'ejs');
 app.listen(port, () => console.log(`App listening on port ${port}`));
 
 
-// Routes
+// ROUTES
 
+// Home page routes
 app.get('/index', function (req, res) {
   res.render('home');
 })
@@ -34,6 +33,8 @@ app.get('/home', function (req, res) {
   res.render('home');
 })
 
+
+// Other page routes
 app.get('/shows', function (req, res) {
   res.render('shows');
 })

@@ -22,12 +22,28 @@ body {
 	text-decoration: none;
 }
 
-.p5Canvas {
+/*.p5Canvas {
 	margin: 0px;
-	margin-bottom: 10px;
 	display: inline-block;
-	/*border: 0.5px solid;
-	border-color: rgb(0, 0, 255);*/
+	border: 0.5px dashed;
+	border-color: rgb(0, 0, 255);
+}*/
+
+.p5CanvasElt {
+	margin: 0px;
+	display: inline-block;
+	border: 0.5px dashed;
+	border-color: rgb(0, 0, 255);
+}
+
+.p5Canvas {
+	display: inline-block;
+}
+
+.p5CanvasElt .p5Canvas {
+	/*margin: 0px;*/
+	border: 0.5px dashed;
+	border-color: rgb(0, 0, 255);
 }
 
 .msg404 {

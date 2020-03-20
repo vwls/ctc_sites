@@ -8,77 +8,78 @@
     <link rel="stylesheet" type="text/css" href="/views/assets/style.css">
   </head>
   <body>
-  	<h1><a style="text-decoration:none;color:rgb(0,0,255)" href="/">IN-LIEUX</a></h1>
-    <h2>CTC-3002</h2>
-    <p>Computation, Technology, and Culture: Interdisciplinary Critique</p>
+    <div id="page_ctc3002" class="page">
+      	<h1><a style="text-decoration:none;color:rgb(0,0,255)" href="/">IN-LIEUX</a></h1>
+        <h2>CTC-3002</h2>
+        <p>Computation, Technology, and Culture: Interdisciplinary Critique</p>
 
-    <div class="canvasContainer">
-        <!--<div id="p5sketch0" class="p5Canvas"></div>
-        <div id="p5sketch1" class="p5Canvas"></div>
-        <div id="p5sketch2" class="p5Canvas"></div>-->
-        <div id="image0" class="p5Canvas"><img src="/assets/plant1.png" alt="some alt text" width="277px" height="358px"></div>
+        <div class="canvasContainer">
+            <!--<div id="p5sketch0" class="p5Canvas"></div>
+            <div id="p5sketch1" class="p5Canvas"></div>
+            <div id="p5sketch2" class="p5Canvas"></div>-->
+            <div id="image0" class="p5Canvas"><img src="/assets/plant1.png" alt="some alt text" width="277px" height="358px"></div>
 
-        <div id="image1" class="p5Canvas"><img src="/assets/plant2.png" alt="some alt text" width="277px" height="358px"></div>
+            <div id="image1" class="p5Canvas"><img src="/assets/plant2.png" alt="some alt text" width="277px" height="358px"></div>
 
-        <div id="image2" class="p5Canvas"><img src="/assets/plant3.png" alt="some alt text" width="277px" height="358px"></div>
+            <div id="image2" class="p5Canvas"><img src="/assets/plant3.png" alt="some alt text" width="277px" height="358px"></div>
 
-        <div id="image3" class="p5Canvas"><img src="/assets/plant4.png" alt="some alt text" width="277px" height="358px"></div>
+            <div id="image3" class="p5Canvas"><img src="/assets/plant4.png" alt="some alt text" width="277px" height="358px"></div>
 
-        <div id="image4" class="p5Canvas"><img src="/assets/plant5.png" alt="some alt text" width="277px" height="358px"></div>
+            <div id="image4" class="p5Canvas"><img src="/assets/plant5.png" alt="some alt text" width="277px" height="358px"></div>
 
-        <div id="image5" class="p5Canvas"><img src="/assets/plant6.png" alt="some alt text" width="277px" height="358px"></div>
+            <div id="image5" class="p5Canvas"><img src="/assets/plant6.png" alt="some alt text" width="277px" height="358px"></div>
 
-        <div id="image6" class="p5Canvas"><img src="/assets/plant7.png" alt="some alt text" width="277px" height="358px"></div>
+            <div id="image6" class="p5Canvas"><img src="/assets/plant7.png" alt="some alt text" width="277px" height="358px"></div>
 
-        <div id="image7" class="p5Canvas"><img src="/assets/plant8.png" alt="some alt text" width="277px" height="358px"></div>
+            <div id="image7" class="p5Canvas"><img src="/assets/plant8.png" alt="some alt text" width="277px" height="358px"></div>
 
-        <div id="image8" class="p5Canvas"><img src="/assets/plant9.png" alt="some alt text" width="277px" height="358px"></div>
+            <div id="image8" class="p5Canvas"><img src="/assets/plant9.png" alt="some alt text" width="277px" height="358px"></div>
 
-        <div id="image9" class="p5Canvas"><img src="/assets/plant10.png" alt="some alt text" width="277px" height="358px"></div>
+            <div id="image9" class="p5Canvas"><img src="/assets/plant10.png" alt="some alt text" width="277px" height="358px"></div>
 
-        <div id="image10" class="p5Canvas"><img src="/assets/plant11.png" alt="some alt text" width="277px" height="358px"></div>
+            <div id="image10" class="p5Canvas"><img src="/assets/plant11.png" alt="some alt text" width="277px" height="358px"></div>
 
-        <div id="image11" class="p5Canvas"><img src="/assets/plant3.png" alt="some alt text" width="277px" height="358px"></div>
+            <div id="image11" class="p5Canvas"><img src="/assets/plant3.png" alt="some alt text" width="277px" height="358px"></div>
+        </div>
+
+        <!-- FIRST CANVAS -->
+        <!--<script>
+        // This block of code creates a canvas element that contains
+        // a grayscale live video capture
+        const s0 = ( sketch ) => {
+
+        	//let capture;
+
+        	//let dashDist = [5, 5];
+    	    		
+        	sketch.setup = () => {
+        		sketch.createCanvas(300, 300);
+        		sketch.background(255);
+    			sketch.stroke(0, 0, 255);
+
+
+    			// Canvas boundaries
+    			//sketch.drawingContext.setLineDash(dashDist);
+    			//sketch.rect(0, 0, sketch.width, sketch.height);
+
+    			// Reset to non-dashed line
+    			//sketch.drawingContext.setLineDash([0, 0]);
+        	}
+
+        	sketch.draw = () => {
+
+        		//sketch.image(capture, 0, 0, sketch.width, sketch.width * capture.height / capture.width);
+        		//sketch.image(capture, 0, 0, sketch.width, 300);
+      			//sketch.filter(sketch.GRAY);
+        	
+    		};
+        };
+
+        let myp5_0 = new p5(s0, 'p5sketch0');
+
+        </script> -->
+
+        
     </div>
-
-    <!-- FIRST CANVAS -->
-    <!--<script>
-    // This block of code creates a canvas element that contains
-    // a grayscale live video capture
-    const s0 = ( sketch ) => {
-
-    	//let capture;
-
-    	//let dashDist = [5, 5];
-	    		
-    	sketch.setup = () => {
-    		sketch.createCanvas(300, 300);
-    		sketch.background(255);
-			sketch.stroke(0, 0, 255);
-
-
-			// Canvas boundaries
-			//sketch.drawingContext.setLineDash(dashDist);
-			//sketch.rect(0, 0, sketch.width, sketch.height);
-
-			// Reset to non-dashed line
-			//sketch.drawingContext.setLineDash([0, 0]);
-    	}
-
-    	sketch.draw = () => {
-
-    		//sketch.image(capture, 0, 0, sketch.width, sketch.width * capture.height / capture.width);
-    		//sketch.image(capture, 0, 0, sketch.width, 300);
-  			//sketch.filter(sketch.GRAY);
-    	
-		};
-    };
-
-    let myp5_0 = new p5(s0, 'p5sketch0');
-
-    </script> -->
-
-    
-
   </body>
 </html>
