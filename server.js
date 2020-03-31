@@ -59,6 +59,12 @@ app.get('/ctc3002', function (req, res) {
   res.render('ctc3002');
 })
 
+// UVM page
+app.get('/uvm', function (req, res) {
+  res.render('uvm');
+})
+
+
 // 404 page
 app.get('*', function(req, res){
   res.status(404).render('404');
