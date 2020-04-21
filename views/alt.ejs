@@ -1,0 +1,126 @@
+
+
+<html>
+  <head>
+  
+    <meta charset="utf-8">
+    <title>uvm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="/public/assets/uvm_style.css"> -->
+    <link rel="stylesheet" type="text/css" href="/views/assets/uvm_style.css">
+  </head>
+  <body>
+  	<div id="page_uvm" class="page">
+
+	    <p class="header">GALLERY IN-LIEUX</p>
+	    <p>work from home</p>
+	    <!--<p>alone together</p>-->
+
+	    <!--<div class="canvasContainer">  
+          <div id="image0" class="p5Canvas"><img src="/assets/43690017.JPG" alt="some alt text" width="600px" height="398px"></div>
+        </div>-->
+
+	   <div class="canvasContainer">
+		    <div id="p5sketch0" class="p5CanvasElt"></div>
+		    <!--<div id="p5sketch1" class="p5CanvasElt"></div>
+		    <div id="p5sketch2" class="p5CanvasElt"></div> -->
+	   </div>
+
+	   <!--<div id="p5sketch0" class="p5CanvasElt"></div>-->
+	    
+	    <script>
+	    const s0 = ( sketch ) => {
+			
+			'use strict';
+
+			let canvas;
+
+			let formResolution = 15;
+			let stepSize = 2;
+			let distortionFactor = 1;
+			let initRadius = 150;
+			let centerX;
+			let centerY;
+			let x = [];
+			let y = [];
+
+			let filled = false;
+			let freeze = false;
+
+			sketch.setup = () => {
+			  canvas = sketch.createCanvas(1280, 400);
+			  canvas.position(0, 0);
+			  canvas.style('z-index',  '-1');
+
+			  // init shape
+			  centerX = sketch.width / 2;
+			  centerY = sketch.height / 2;
+			  var angle = sketch.radians(360 / formResolution);
+			  for (var i = 0; i < formResolution; i++) {
+			    x.push(sketch.cos(angle * i) * initRadius);
+			    y.push(sketch.sin(angle * i) * initRadius);
+			  }
+
+			  sketch.stroke(0, 50);
+			  sketch.strokeWeight(0.75);
+			  sketch.background(250, 243, 225);
+			  
+			  //frameRate(10);
+			}
+
+			sketch.draw = () => {
+			  // floating towards mouse position
+			  centerX += (sketch.mouseX - centerX) * 0.005;
+			  centerY += (sketch.mouseY - centerY) * 0.005;
+
+			  // calculate new points
+			  for (var i = 0; i < formResolution; i++) {
+			    x[i] += sketch.random(-stepSize, stepSize);
+			    y[i] += sketch.random(-stepSize, stepSize);
+			    // uncomment the following line to show position of the agents
+			    // ellipse(x[i] + centerX, y[i] + centerY, 5, 5);
+			  }
+
+			  sketch.noFill();
+
+			  sketch.beginShape();
+			  // first controlpoint
+			  sketch.curveVertex(x[formResolution - 1] + centerX, y[formResolution - 1] + centerY);
+
+			  // only these points are drawn
+			  for (var i = 0; i < formResolution; i++) {
+			    sketch.curveVertex(x[i] + centerX, y[i] + centerY);
+			  }
+			  sketch.curveVertex(x[0] + centerX, y[0] + centerY);
+
+			  // end controlpoint
+			  sketch.curveVertex(x[1] + centerX, y[1] + centerY);
+			  sketch.endShape();
+			}
+
+			// function mousePressed() {
+			//   // init shape on mouse position
+			//   centerX = mouseX;
+			//   centerY = mouseY;
+			//   var angle = radians(360 / formResolution);
+			//   var radius = initRadius * random(0.5, 1);
+			//   for (var i = 0; i < formResolution; i++) {
+			//     x[i] = cos(angle * i) * initRadius;
+			//     y[i] = sin(angle * i) * initRadius;
+			//   }
+			// }
+
+
+	    };
+
+	    //let myp5_0 = new p5(s0);
+	    let myp5_0 = new p5(s0, 'p5sketch0');
+
+	    </script> 
+
+	    
+	  </div>
+  </body>
+</html>

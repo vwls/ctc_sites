@@ -1,5 +1,5 @@
 body {
-	background: white;
+	background: #faf3e1;
 	color: black;
 	margin: 25px;
 }
@@ -11,10 +11,10 @@ p {
 }
 
 p.header {
-	font-size: 48;
+	font-size: 68;
 	font-family: 'Roboto Mono', monospace;
 	color: black;
-	-webkit-text-fill-color: white;
+	-webkit-text-fill-color: #faf3e1;
 	-webkit-text-stroke-width: 0.5px;
 	-webkit-text-stroke-color: black;
 	font-weight: bold;
@@ -24,16 +24,12 @@ p.header {
 }
 
 h1 {
-	font-size: 48;
+	font-size: 68;
 	font-family: 'Roboto Mono', monospace;
 	color: black;
-	-webkit-text-fill-color: white;
+	-webkit-text-fill-color: #faf3e1;
 	-webkit-text-stroke-width: 0.5px;
 	-webkit-text-stroke-color: black;
-}
-
-body *:hover {
-	color: #3e944b;
 }
 
 .canvasContainer {
@@ -41,4 +37,19 @@ body *:hover {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	display: inline-block;
+}
+
+/*#image0 {
+	width: 600px;
+	height: 398px;
+}*/
+
+.panel_text {
+	color: black;
+}
+
+.panel_text:hover {
+	/*background: yellow;*/
+
 }
