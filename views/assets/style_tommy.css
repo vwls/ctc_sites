@@ -1,0 +1,74 @@
+body {
+	font-family: 'Inconsolata', monospace;
+	background: white;
+	color: rgb(0, 0, 255);
+}
+
+h1 {
+	margin: 0px;
+}
+
+#canvasContainer {
+	width: 100%;
+}
+
+#navContainer {
+	width: 100%;
+}
+
+.navItem {
+	display: inline-block;
+	margin: 5px;
+	margin-top: 10px;
+}
+
+.navItem a {
+	text-decoration: none;
+}
+
+.artist_name {
+	margin-top: 50px;
+	margin-left: 50px;
+	margin-bottom: 0px;
+}
+
+.description_container {
+	margin-left: 50px;
+	width: 800px;
+}
+
+.media_container {
+	text-align: center;
+	width: 100%;
+}
+
+.media_player {
+	text-align: center;
+}
+
+/*.p5Canvas {
+	margin: 0px;
+	display: inline-block;
+	border: 0.5px dashed;
+	border-color: rgb(0, 0, 255);
+}*/
+
+.p5CanvasElt {
+	margin: 0px;
+	display: inline-block;
+	border: 0.5px dashed;
+	border-color: rgb(0, 0, 255);
+}
+
+.p5Canvas {
+	display: inline-block;
+}
+
+.p5CanvasElt .p5Canvas {
+	/*margin: 0px;*/
+	border: 0.5px dashed;
+	border-color: rgb(0, 0, 255);
+}
+
+
+
