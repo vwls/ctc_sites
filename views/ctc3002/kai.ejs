@@ -4,26 +4,76 @@
     <meta charset="utf-8">
     <title>Kai Stewart</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="/public/assets/style.css"> -->
-    <link rel="stylesheet" type="text/css" href="/views/assets/style.css">
+    <!--<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/views/assets/style_kai.css">
   </head>
   <body>
-  	<div id="page_artist" class="page">
+  	<div id="page_artist_kai" class="page">
 	  
-	    <h1><a style="text-decoration:none;color:rgb(0,0,255)" href="/">Kai Stewart</a></h1>
+	    <!--<h1><a style="text-decoration:none;color:rgb(0,0,255)" href="/">Kai Stewart</a></h1> -->
 	    <!--<p>the artist is not present</p>-->
-
+	    <h1 id="page_header"><i><span style="color:rgb(246, 113, 107)">W</span><span style="color:rgb(255, 159, 0)">e</span><span style="color:rgb(255, 200, 0)">l</span><span style="color:rgb(119, 140, 27)">c</span><span style="color:rgb(75, 81, 163)">o</span><span style="color:rgb(182, 110, 195)">m</span><span style="color:rgb(252, 168, 211)">e</span> <span style="color:rgb(246, 113, 107)">t</span><span style="color:rgb(255, 159, 0)">o</span> <span style="color:rgb(255, 200, 0)">m</span><span style="color:rgb(119, 140, 27)">y</span> <span style="color:rgb(75, 81, 163)">W</span><span style="color:rgb(182, 110, 195)">e</span><span style="color:rgb(252, 168, 211)">b</span><span style="color:rgb(246, 113, 107)">p</span><span style="color:rgb(255, 159, 0)">a</span><span style="color:rgb(255, 200, 0)">g</span><span style="color:rgb(119, 140, 27)">e</span><span style="color:rgb(75, 81, 163)">!</span></i></h1>
 	    
+	    <div id="deco_box"></div>
 
 	    <div id="navContainer">
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/about">ABOUT</a></p>
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc1000">SHOW 1</a></p>
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc3002">SHOW 2</a></p>
+	    	<p class="navItem"><a style="color:rgb(0,0,255)" href="/">Home</a></p>
+		    <p class="navItem"><a style="color:rgb(0,0,255)" href="/about">About</a></p>
+		    <p class="navItem"><a style="color:rgb(0,0,255)" href="/ctc1000">Gallery 1</a></p>
+		    <p class="navItem"><a style="color:rgb(0,0,255)" href="/ctc3002">Gallery 2</a></p>
 		    <!-- <p class="navItem"><a href="/shows">shows</a></p> -->
 		    <!-- <p class="navItem"><a href="/archive">archive</a></p> -->
 		    <!-- <p class="navItem"><a href="/week6">week 6</a></p> -->
 	    </div>
+
+
+
+	    <div class="description_container">
+	    	<p class="description">3ug3n3 Version 6.00.0 is a speech operated drawing program. It was created in P5.js using the Speech and Sound Libraries. 3ug3n3 came into being as a result of both a desire for conversation and an enjoyment of things that are just kind of bad. It requires perseverance to operate, but rewards its user with invaluable commentary.</p>
+
+	    	<ul>
+	    		<li>Please make sure that your computer microphone is working and you have allowed this webpage to access it.</li>
+	    		<li>If 3ug3n3 gives you trouble or the cold shoulder please reload this webpage. (Note: reloading will erase your drawing).</li>
+	    	</ul>
+
+	    <div>
+
+	  	
+	    <div class="canvasContainer">
+		    <div id="p5sketch0" class="p5CanvasElt"></div>
+		    <a href="https://editor.p5js.org/ghostiak/present/VrvMDGogX"><img class="sketch_image" src="/assets/kai_image.png" width="675px" alt="test alt text"></a>
+
+	    </div>
+
+
+	    <!-- KAI'S INTERACTIVE PROGRAM -->
+
+	    <script>
+		    const s0 = ( sketch ) => {
+
+		    			
+		    	sketch.setup = () => {
+
+		    	}
+
+		    	sketch.draw = () => {
+
+					
+				};
+		    };
+
+
+
+		    let myp5_0 = new p5(s0, 'p5sketch0');
+
+		 </script>
+
+
+
+
 	  </div>
   </body>
 </html>
