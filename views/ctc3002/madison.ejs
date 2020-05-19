@@ -5,25 +5,184 @@
     <title>Madison Sheldon</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="/public/assets/style.css"> -->
-    <link rel="stylesheet" type="text/css" href="/views/assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="/views/assets/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="/views/assets/style_madison.css">
   </head>
   <body>
   	<div id="page_artist" class="page">
 	  
-	    <h1><a style="text-decoration:none;color:rgb(0,0,255)" href="/">Madison Sheldon</a></h1>
-	    <!--<p>the artist is not present</p>-->
+	    <h1><a style="text-decoration:none;color:rgb(0,0,255)" href="/">IN-LIEUX</a></h1>
 
-	    
 
 	    <div id="navContainer">
 		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/about">ABOUT</a></p>
 		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc1000">SHOW 1</a></p>
 		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc3002">SHOW 2</a></p>
-		    <!-- <p class="navItem"><a href="/shows">shows</a></p> -->
-		    <!-- <p class="navItem"><a href="/archive">archive</a></p> -->
-		    <!-- <p class="navItem"><a href="/week6">week 6</a></p> -->
 	    </div>
+
+
+	    <h1 class="project_title">Digital Happy Place</h1>
+	    <h3 class="artist_name">Madison Sheldon</h3>
+
+
+	    <div class="description_container">
+	    	<p class="description">This sketch emulates a digital happy place filled with sunshine and flowers inspired by the springtime. Created to raise my own, and hopefully others' spirits during such a difficult and confusing time. Utilizes p5.js for interactivity and design elements as well as PoseNet with ml5.js for image detection and feature tracking.</p>
+	    </div>
+
+	    <div class="canvasContainer">
+		    <div id="p5sketch0" class="p5CanvasElt" alt="You are my sunshine, my only sunshine. You make me happy when skies are gray. You'll never know dear, how much I love you. Please don't take my sunshine away."></div>
+	    </div>
+
+	    <script>
+	    const s0 = ( sketch ) => {
+
+			let video;
+			let poseNet;
+			let noseX = 0;
+			let noseY = 0;
+			let eyelX = 0;
+			let eyelY = 0;
+			let flowers = [];
+			let cloud = {
+			  x: 400,
+			  y: 200,
+			  w: 550,
+			  h: 260
+			}
+
+			let flowerSmiling1;
+			let flowerSmiling2;
+			let gass;
+			let textHere;
+			let glasses1;
+			let cloudImg;
+
+			let x;
+			let y;
+
+			sketch.preload = () => {
+				flowerSmiling1 = sketch.loadImage('/assets/smileFlower-1.png');
+				flowerSmiling2 = sketch.loadImage('/assets/smileFlower-2.png');
+				grass = sketch.loadImage('/assets/grass.png');
+				textHere = sketch.loadImage('/assets/text.png');
+				glasses1 = sketch.loadImage('/assets/glasses1.png');
+				cloudImg = sketch.loadImage('/assets/cloud.png');
+			}
+		    	
+	    	sketch.setup = () => {
+	    		sketch.createCanvas(640, 480);
+
+	    		x = sketch.width;
+	    		y = sketch.height/2;
+
+	    		video = sketch.createCapture(sketch.VIDEO);
+	    		video.hide();
+
+	    		poseNet = ml5.poseNet(video, modelLoaded);
+	    		poseNet.on('pose', gotPoses);
+	    	}
+
+	    	sketch.draw = () => {
+
+	    		sketch.background(110, 230, 252);
+  				sketch.cursor(sketch.HAND);	
+
+				sketch.image(cloudImg, cloud.x, cloud.y, cloud.w, cloud.h);
+			    sketch.image(cloudImg, cloud.x-150, cloud.y-110, cloud.w, cloud.h);
+			    sketch.image(cloudImg, cloud.x-320, cloud.y-40, cloud.w, cloud.h);
+
+			    cloud.y += sketch.random(-0.5, 0.5);
+  				cloud.x -= 0.5;
+
+  				if (cloud.x < 0) {
+					cloud.x = sketch.height;
+				}
+
+				sketch.image(video, 100, 85, 340, 260);
+
+				let d = sketch.dist(noseX, noseY, eyelX, eyelY);
+
+				sketch.image(glasses1, eyelX-90-d, eyelY+10-d, d*11, d*6);
+				sketch.image(grass, 0, 320, grass.width/3, grass.height/3);
+				sketch.image(textHere, 10, 0, grass.width/2.5, grass.height/2.5);
+
+				for (let i = 0; i < flowers.length; i++) {
+					flowers[i].checkBounds();
+				}  
+				
+			};
+
+			function gotPoses(poses) {
+				if(poses.length > 0){
+					let newX = poses[0].pose.keypoints[0].position.x
+					let newY = poses[0].pose.keypoints[0].position.y
+
+					let eX = poses[0].pose.keypoints[1].position.x
+					let eY = poses[0].pose.keypoints[1].position.y
+
+					noseX = sketch.lerp(noseX, newX, 0.5);
+					noseY = sketch.lerp(noseY, newY, 0.5);
+
+					eyelX = sketch.lerp(eyelX, eX, 0.5);
+					eyelY = sketch.lerp(eyelY, eY, 0.5);
+				}
+			};
+
+			function modelLoaded() {
+				console.log('Model Loaded!');
+			}
+
+			sketch.mousePressed = () => {
+				for (let i = 0; i < 4; i++) {
+					let x = sketch.random(sketch.width)
+					let y = 315;
+					flowers[i] = new Flower(x, y, 600, 300);
+  				}
+			};
+
+
+			class Flower {
+				constructor(x, y, width, height) {
+					this.x = x;
+					this.y = y;
+					this.width = sketch.width;
+					this.height = sketch.height;
+				}
+
+				// one of the png states
+				render1() {
+					sketch.image(flowerSmiling2, this.x, this.y, this.width, this.height);
+				}
+
+				// the other png state
+				render2() {
+					sketch.image(flowerSmiling1, this.x, this.y, this.width, this.height);
+				}
+
+				// function that does the boundary checking and determines which type of flower to render
+				checkBounds() {
+				if (sketch.mouseX < this.x + this.width / 2 &&
+				  sketch.mouseX > this.x - this.width / 2 &&
+				  sketch.mouseY < this.y + this.height / 2 &&
+				  sketch.mouseY > this.y - this.height / 2) {
+				  this.render1();
+				} 
+					else {
+					  this.render2();
+					}
+				}
+			}
+
+
+	    };
+
+	    //let myp5_0 = new p5(s0);
+	    let myp5_0 = new p5(s0, 'p5sketch0');
+
+	    </script>
+
 	  </div>
   </body>
 </html>
