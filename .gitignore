@@ -4,6 +4,12 @@
 # Ignore all jpg files
 *.jpg
 *.jpeg
+*.JPG
+*.JPEG
+
+# Ignore all png files
+*.png
+*.PNG
 
 # Ignore all API env variables
 *.env
