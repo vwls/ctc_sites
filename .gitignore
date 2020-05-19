@@ -11,5 +11,9 @@
 *.png
 *.PNG
 
+# Ignore all gif files
+*.gif
+*.GIF
+
 # Ignore all API env variables
 *.env
