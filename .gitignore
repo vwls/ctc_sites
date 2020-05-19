@@ -1,5 +1,9 @@
 # Ignore all mp4 files
 *.mp4
 
+# Ignore all jpg files
+*.jpg
+*.jpeg
+
 # Ignore all API env variables
 *.env
