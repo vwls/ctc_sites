@@ -1,0 +1,60 @@
+body {
+	font-family: 'Inconsolata', monospace;
+	background: white;
+	color: rgb(0, 0, 255);
+	background: #FFDDE1;
+}
+
+h1 {
+	margin: 0px;
+}
+
+#navContainer {
+	width: 100%;
+}
+
+.navItem {
+	display: inline-block;
+	margin: 5px;
+	margin-top: 10px;
+}
+
+.navItem a {
+	text-decoration: none;
+}
+
+.project_title {
+	margin-top: 50px;
+	margin-left: 50px;
+	margin-bottom: -10px;
+}
+
+.artist_name {
+	margin-left: 50px;
+	margin-bottom: 25px;
+}
+
+.image_container {
+	margin-left: 50px;
+	width: 1000px;
+	/*height: 1200px;*/
+	/*background-color: black;*/
+}
+
+.image_container .inner {
+  display: inline-block;
+  border: solid gray 1px;
+  width: 300px;
+  height: 200px;
+  background-color: white;
+}
+
+/*.inner {
+  background-image: url( "https://images.unsplash.com/photo-1492539763615-dd9bfec6ff85?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=89d99187156aa43fd4c337fddd7cebac");
+  background-repeat: no-repeat;
+}*/
+
+
+
+
+
