@@ -37,11 +37,44 @@ h1 {
 	margin-bottom: 25px;
 }
 
-.description_container {
-	margin-left: 50px;
-	width: 800px;
+.post_container {
+	text-align: center;
+	width: 100%;
+	display: inline-block;
 }
 
+.description_container {
+	/*margin-left: 50px;
+	margin-right: 50px;*/
+	margin:auto;
+	text-align: center;
+	width: 100%;
+	
+}
+
+.description_container p.description {
+	text-align: left;
+	width: 800px;
+	display: inline-block;
+}
+
+.image_container {
+	margin: 0px;
+	display: inline-block;
+}
+
+.image_container .main_img {
+	border: 2px solid blue;
+	display: block;
+}
+
+.image_container img.sub_img {
+	margin-top: 15px;
+}
+
+.image_container > img:nth-child(3) { 
+	margin-left: 200px;
+}
 
 
 
