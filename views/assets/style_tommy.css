@@ -26,10 +26,15 @@ h1 {
 	text-decoration: none;
 }
 
-.artist_name {
+.project_title {
 	margin-top: 50px;
 	margin-left: 50px;
-	margin-bottom: 0px;
+	margin-bottom: -10px;
+}
+
+.artist_name {
+	margin-left: 50px;
+	margin-bottom: 25px;
 }
 
 .description_container {
