@@ -7,6 +7,41 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="/public/assets/style.css"> -->
     <link rel="stylesheet" type="text/css" href="/views/assets/style.css">
+
+
+    <script>
+    	document.addEventListener("DOMContentLoaded", function() {
+		var lazyloadImages = document.querySelectorAll("img.lazy");    
+		var lazyloadThrottleTimeout;
+
+		function lazyload () {
+		if(lazyloadThrottleTimeout) {
+		  clearTimeout(lazyloadThrottleTimeout);
+		}    
+
+		lazyloadThrottleTimeout = setTimeout(function() {
+		    var scrollTop = window.pageYOffset;
+		    lazyloadImages.forEach(function(img) {
+		        if(img.offsetTop < (window.innerHeight + scrollTop)) {
+		          img.src = img.dataset.src;
+		          img.classList.remove('lazy');
+		        }
+		    });
+		    if(lazyloadImages.length == 0) { 
+		      document.removeEventListener("scroll", lazyload);
+		      window.removeEventListener("resize", lazyload);
+		      window.removeEventListener("orientationChange", lazyload);
+		    }
+		}, 20);
+		}
+
+		document.addEventListener("scroll", lazyload);
+		window.addEventListener("resize", lazyload);
+		window.addEventListener("orientationChange", lazyload);
+		});
+    </script>
+
+
   </head>
   <body>
   	<div id="page_artist" class="page">
