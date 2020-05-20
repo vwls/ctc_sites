@@ -15,5 +15,8 @@
 *.gif
 *.GIF
 
+# Ignore all wav giles
+*.wav
+
 # Ignore all API env variables
 *.env
