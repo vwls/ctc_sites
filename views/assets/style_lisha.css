@@ -64,61 +64,100 @@ h1 {
 .image_container .label {
 	/*border: 1px solid blue;*/
 	height: 50px;
+	font-size: 14px;
 }
 
 
 /* adjusting the position of each block in the grid */
-.image_container div:nth-child(2) > img {
+.image_container div:nth-child(4) > img { 
 	/*border: 1px solid red;*/
+	padding-bottom: 25px;
+}
+.image_container div:nth-child(5) {
+	/*border: 1px solid yellow;*/
+	position: relative;
+	top: -10px;
+	left: -45px;
 }
 
-.image_container div:nth-child(4) > img {
+
+.image_container div:nth-child(8) > img { 
 	/*border: 1px solid red;*/
+	position: relative;
+	top: 30px;
 }
 
-.image_container div:nth-child(6) > img {
+.image_container div:nth-child(9) {
 	/*border: 1px solid red;*/
+	position: relative;
+	top: 40px;
+	left: -60px;
 }
 
-.image_container div:nth-child(8) > img {
-	/*border: 1px solid red;*/
-}
-
-.image_container div:nth-child(10) > img {
-	/*border: 1px solid red;*/
-}
 
 .image_container div:nth-child(12) > img {
 	/*border: 1px solid red;*/
 }
 
-.image_container div:nth-child(14) > img {
+.image_container div:nth-child(13) {
+	/*border: 1px solid red;*/
+	position: relative;
+	left: -70px;
+	top: 10px;
+}
+
+
+.image_container div:nth-child(16) > img { 
 	/*border: 1px solid red;*/
 }
 
-.image_container div:nth-child(16) > img {
+.image_container div:nth-child(17) {
 	/*border: 1px solid red;*/
+	position: relative;
+	left: -60px;
+	top: 10px;
 }
 
-.image_container div:nth-child(18) > img {
-	/*border: 1px solid red;*/
-}
 
 .image_container div:nth-child(20) > img {
 	/*border: 1px solid red;*/
+	position: relative;
+	top: -40px;
 }
 
-.image_container div:nth-child(22) > img {
+.image_container div:nth-child(21){
+	/*border: 1px solid red;*/
+	position: relative;
+	top: -20px;
+	left: -65px;
+}
+
+
+.image_container div:nth-child(24) > img { 
 	/*border: 1px solid red;*/
 }
 
-.image_container div:nth-child(24) > img {
+.image_container div:nth-child(25) {
 	/*border: 1px solid red;*/
+	position: relative;
+	left: -60px;
 }
-.image_container div:nth-child(26) > img {
-	/*border: 1px solid red;*/
-}
+
 
 .image_container div:nth-child(28) > img {
+	/*border: 1px solid red;*/
+}
+.image_container div:nth-child(29){
+	/*border: 1px solid red;*/
+	position: relative;
+	left: -80px;
+	top: 10px;
+}
+
+
+.image_container div:nth-child(32) > img {
+	/*border: 1px solid red;*/
+}
+.image_container div:nth-child(33) {
 	/*border: 1px solid red;*/
 }
