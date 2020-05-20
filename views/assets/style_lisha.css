@@ -23,8 +23,16 @@ h1 {
 	text-decoration: none;
 }
 
+#videoBG {
+    position:fixed;
+    margin-top: -125px;
+    z-index: -1;
+    width: 1080px;
+}
+
 
 .image_container {
+	margin-top: 75px;
 	margin-left: 50px;
 	width: 1000px;
 	/*height: 1500px;*/
@@ -35,23 +43,82 @@ h1 {
 .image_container .inner {
   display: inline-block;
   /*border: solid gray 1px;*/
-  margin-right: 25px;
+  /*margin-right: 25px;*/
   /*margin-bottom: 50px;*/
-  margin-top: 30px;
-  width: 300px;
-  height: 200px;
+  /*margin-top: 10px;*/
+  width: 100px;
+  height: 100px;
   /*background-color: white;*/
+  margin-bottom: 20px;
 }
 
-#videoBG {
-    position:fixed;
-    z-index: -1;
-    width: 1080px;
+.image_container .inner:hover {
+  cursor: pointer;
 }
 
-/*.image_container .inner > nth child {}*/
+.image_container .inner img {
+	/*border: 1px solid blue;*/
+	width: 100px;
+}
 
-/*.inner {
-  background-image: url( "https://images.unsplash.com/photo-1492539763615-dd9bfec6ff85?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=89d99187156aa43fd4c337fddd7cebac");
-  background-repeat: no-repeat;
-}*/
+.image_container .label {
+	/*border: 1px solid blue;*/
+	height: 50px;
+}
+
+
+/* adjusting the position of each block in the grid */
+.image_container div:nth-child(2) > img {
+	/*border: 1px solid red;*/
+}
+
+.image_container div:nth-child(4) > img {
+	/*border: 1px solid red;*/
+}
+
+.image_container div:nth-child(6) > img {
+	/*border: 1px solid red;*/
+}
+
+.image_container div:nth-child(8) > img {
+	/*border: 1px solid red;*/
+}
+
+.image_container div:nth-child(10) > img {
+	/*border: 1px solid red;*/
+}
+
+.image_container div:nth-child(12) > img {
+	/*border: 1px solid red;*/
+}
+
+.image_container div:nth-child(14) > img {
+	/*border: 1px solid red;*/
+}
+
+.image_container div:nth-child(16) > img {
+	/*border: 1px solid red;*/
+}
+
+.image_container div:nth-child(18) > img {
+	/*border: 1px solid red;*/
+}
+
+.image_container div:nth-child(20) > img {
+	/*border: 1px solid red;*/
+}
+
+.image_container div:nth-child(22) > img {
+	/*border: 1px solid red;*/
+}
+
+.image_container div:nth-child(24) > img {
+	/*border: 1px solid red;*/
+}
+.image_container div:nth-child(26) > img {
+	/*border: 1px solid red;*/
+}
+
+.image_container div:nth-child(28) > img {
+	/*border: 1px solid red;*/
+}
