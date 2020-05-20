@@ -158,7 +158,7 @@ app.get('/ctc3002/chanel-lee', function (req, res) {
   res.render('ctc3002/chanel');
 })
 
-app.get('/ctc3002/camille-cady-maccrea', function (req, res) {
+app.get('/ctc3002/camille-cady-mccrea', function (req, res) {
   res.render('ctc3002/camille');
 })
 
