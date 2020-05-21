@@ -1,0 +1,78 @@
+body {
+	font-family: 'Inconsolata', monospace;
+	background: white;
+	color: rgb(0, 0, 255);
+}
+
+h1 {
+	margin: 0px;
+
+}
+
+#navContainer {
+	width: 100%;
+	margin-left: 15px;
+	margin-top: 100px;
+}
+
+.navItem {
+	display: inline-block;
+	margin: 5px;
+	margin-top: 10px;
+}
+
+.navItem a {
+	text-decoration: none;
+}
+
+.project_title {
+	margin-top: 50px;
+	margin-left: 50px;
+	margin-bottom: -10px;
+}
+
+.artist_name {
+	margin-left: 50px;
+	margin-bottom: 25px;
+}
+
+.slider_container{
+	margin-top: 15px;
+	margin-bottom: -10px;
+	width: 150px;
+	text-align: center;
+	display:inline-block;
+}
+
+.slider_container img {
+	width: 150px;
+	display: inline-block;
+}
+
+.description {
+	margin-left: 50px;
+	font-size: 12px;
+	display: inline-block;
+	width: 480px;
+	margin-bottom: 50px;
+	line-height: 15px
+}
+
+.image_container {
+	/*width: 100%;
+	text-align: center;*/
+	display: inline-block;
+}
+
+.image_container .inner {
+ 	display: inline-block;
+ 	width: 300px;
+ 	margin: 20px;
+}
+
+.image_container .inner img {
+	width: 300px;
+}
+
+
+
