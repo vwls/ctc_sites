@@ -1,0 +1,39 @@
+
+body {
+	font-family: 'Inconsolata', monospace;
+	background: white;
+	color: rgb(0, 0, 255);
+}
+
+#navContainer {
+	width: 100%;
+}
+
+.navItem {
+	display: inline-block;
+	margin: 5px;
+	margin-top: 10px;
+}
+
+.navItem a {
+	text-decoration: none;
+}
+
+#page_preshow {
+	text-align: center;
+	width: 100%;
+}
+
+.media_container {
+	width: 100%;
+	text-align: center;
+}
+
+#videoBG {
+   /* position:fixed;
+    margin-top: -125px;
+    z-index: -1;
+    width: 1080px;*/
+    margin: auto;
+    display: inline-block;
+}
