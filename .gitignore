@@ -15,6 +15,10 @@
 *.gif
 *.GIF
 
+# Ignore all tif files
+*.TIF
+#.tif
+
 # Ignore all wav giles
 *.wav
 
