@@ -4,26 +4,32 @@
     <meta charset="utf-8">
     <title>Zack Davey</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="/public/assets/style.css"> -->
-    <link rel="stylesheet" type="text/css" href="/views/assets/style.css">
+    <link rel="stylesheet" type="text/css" href="/views/assets/style_zack.css">
   </head>
   <body>
   	<div id="page_artist" class="page">
-	  
-	    <h1><a style="text-decoration:none;color:rgb(0,0,255)" href="/">Zack Davey</a></h1>
-	    <!--<p>the artist is not present</p>-->
-
-	    
+	  	
+	  	<div class="header_container">
+	    	<h1><a style="text-decoration:none;color:rgb(0,0,255)" href="/">Zack Davey</a></h1>
+	    	<p><a href="https://www.zackdavey.com/">zackdavey.com</a><p>
+	    </div>
 
 	    <div id="navContainer">
 		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/about">ABOUT</a></p>
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc1000">SHOW 1</a></p>
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc3002">SHOW 2</a></p>
-		    <!-- <p class="navItem"><a href="/shows">shows</a></p> -->
-		    <!-- <p class="navItem"><a href="/archive">archive</a></p> -->
-		    <!-- <p class="navItem"><a href="/week6">week 6</a></p> -->
+		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc1000">GALLERY 1</a></p>
+		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc3002">GALLERY 2</a></p>
 	    </div>
+
+	    <div class="media_container">
+			<video class="media_player" width="640"  alt="This video is a recording of a live stream. In it, there is a landscape that sits very still. There are trees, leaves and plants beginning to bloom, and lots of fallen leaves on the ground. There is almost nothing that moves in the video, but the occasional leaf falling that signifies it’s not a photograph. The trees and branches fill most of the composition, with two trees in particular sticking out into the foreground towards the left. There is also a single large plant in the bottom-middle of the video, and a tree that has completely fallen in the landscape, nearly parallel with the bottom frame. The video is very mundane. There is nothing particularly beautiful or ugly about this landscape." controls>
+			  <source src="/assets/Untitled.mp4" type="video/mp4">
+			</video>
+			<p class="description">In 'Untitled', I programmed an algorithm in p5.js that uses the brightness of my backyard to control a Seed function which continuously reorganizes all of the notes of Bill Evan’s “Peace Piece.” Evans originally wrote this song to convey a feeling of loneliness. In performing this song, he romanticizes the idea of loneliness into something beautiful. For me, it is his harmonies which accurately portray loneliness, and the composition which romanticizes it.</p>
+
+			<p class="description">In recomposing this song, I aimed to more accurately represent what separation during Covid-19 meant for me. In “Peace Piece,” Evans was heavily inspired by the impressionist classical musicians such as Claude Debussy and Erik Satie. These musicians, in turn, were inspired by impressionist paintings. In “Untitled,” I refer to impressionism in the use of a mundane landscape. The primary difference is that this landscape is very matter-of-fact, and does not attempt to romanticize or overly compose what it is, in ordinance with the continuous results of the audio. It is now only time and location which control the composition.</p>
+		</div>
+
+
 	  </div>
   </body>
 </html>

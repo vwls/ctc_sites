@@ -1,0 +1,58 @@
+body {
+	font-family: 'Inconsolata', monospace;
+	background: white;
+	color: rgb(0, 0, 255);
+}
+
+h1 {
+	margin: 0px;
+}
+
+#canvasContainer {
+	width: 100%;
+}
+
+#navContainer {
+	width: 100%;
+}
+
+.navItem {
+	display: inline-block;
+	margin: 5px;
+	margin-top: 10px;
+}
+
+.navItem a {
+	text-decoration: none;
+}
+
+.description_container {
+	margin-left: 50px;
+	width: 800px;
+}
+
+.media_container {
+	text-align: center;
+	width: 100%;
+}
+
+.media_player {
+	text-align: center;
+	margin-bottom: 50px;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+.description {
+	line-height: 22px;
+	display: inline-block;
+	text-align: left;
+	color: black;
+	width: 600px;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+
+
+
