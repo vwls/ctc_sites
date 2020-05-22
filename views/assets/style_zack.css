@@ -8,12 +8,25 @@ h1 {
 	margin: 0px;
 }
 
-#canvasContainer {
+.header_container {
 	width: 100%;
+	padding-left: 50px;
+}
+
+.header_container h1 {
+	display:inline-block;
+}
+
+.header_container p {
+	display: inline-block;
+	float: right;
+	margin-right: 100px;
 }
 
 #navContainer {
 	width: 100%;
+	margin-bottom: 50px;
+	margin-left: 50px;
 }
 
 .navItem {
