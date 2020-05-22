@@ -2,27 +2,46 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Diego Espinoza</title>
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="/public/assets/style.css"> -->
-    <link rel="stylesheet" type="text/css" href="/views/assets/style.css">
+    <title>Diego Espinoza</title><!-- 
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/views/assets/style_diego.css">
   </head>
   <body>
   	<div id="page_artist" class="page">
-	  
-	    <h1><a style="text-decoration:none;color:rgb(0,0,255)" href="/">Diego Espinoza</a></h1>
-	    <!--<p>the artist is not present</p>-->
 
-	    
+	    <h1>Diego Espinoza</h1>
+
+
+	    <div class="description_container">
+	    	<p class="description">Since its invention in the 1930’s, musicians and audio engineers have employed the use of <b>stereophonic mixing</b> to create compositions that illusion of space by placing sounds along a horizontal line. The songs below were mixed on Reaper and Ableton Live using a new format of mixing known as <b>binaural ambisonics</b>. This method gives the user a sphere to work with in which sounds can be placed all around the listener including above, below, in front of, and behind.</p>
+
+	    	<p class="description">For optimal binaural listening, please enjoy these compositions with headphones. Included are visualizations of the sound fields that these works are comprised of.</p>
+	    </div>
+
+	    <p class="track_title">Stack</p>
+	    <audio id="audio_stack" controls>
+			<source src="/assets/stack.wav" type="audio/wav">
+		</audio>
+		<img class="image_stack" src="/assets/stack_cover_art.jpg" alt="" width="600px">
+
+
+		<p class="track_title">Days Gone By</p>
+	    <audio id="audio_stack" controls>
+			<source src="/assets/days_gone_by_binaural.wav" type="audio/wav">
+		</audio>
+		<p class="credits">Liam Archibald - Drums</p>
+		<p class="credits">Ed Condon - Bass Guitar</p>
+		<p class="credits">Diego Espinoza - Lead Guitar</p>
+		<p class="credits">Sam Ng - Vocals, Rhythm Guitar, Keyboards</p>
+		<img class="image_stack" src="/assets/days_gone_by_cover_art.jpg" alt="" width="600px">
+
+
 
 	    <div id="navContainer">
 		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/about">ABOUT</a></p>
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc1000">SHOW 1</a></p>
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc3002">SHOW 2</a></p>
-		    <!-- <p class="navItem"><a href="/shows">shows</a></p> -->
-		    <!-- <p class="navItem"><a href="/archive">archive</a></p> -->
-		    <!-- <p class="navItem"><a href="/week6">week 6</a></p> -->
+		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc1000">GALLERY 1</a></p>
+		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc3002">GALLERY 2</a></p>
 	    </div>
 	  </div>
   </body>

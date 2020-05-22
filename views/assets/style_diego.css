@@ -1,0 +1,61 @@
+body {
+	font-family: 'Source Code Pro', monospace;
+	background: white;
+	color: black;
+}
+
+.page {
+	margin-top: 25px;
+	margin-left: 50px;
+}
+
+h1 {
+}
+
+.description_container {
+	/*margin-left: 50px;*/
+	width: 100%;
+	margin-bottom: 75px;
+}
+
+.description {
+	width: 800px;
+}
+
+.track_title {
+	/*margin-left: 50px;*/
+}
+
+audio {
+	/*margin-left: 50px;*/
+}
+
+.page img {
+	display: block;
+	margin-bottom: 50px;
+}
+
+.credits {
+	margin: 5px;
+}
+
+
+#navContainer {
+	margin-top: 50px;
+	/*margin-left: 50px;*/
+}
+
+.navItem {
+	display: inline-block;
+	margin: 5px;
+	margin-top: 10px;
+}
+
+.navItem a {
+	text-decoration: none;
+}
+
+
+
+
+
