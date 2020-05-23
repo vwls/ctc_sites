@@ -92,6 +92,12 @@ app.get('/ctc1000/arayla-bakhat-baketebaike', function (req, res) {
 app.get('/ctc1000/mariana-ramos-ortiz', function (req, res) {
   res.render('ctc1000/mariana');
 })
+app.get('/ctc1000/mariana_p1', function (req, res) {
+  res.render('ctc1000/mariana_p1');
+})
+app.get('/ctc1000/mariana_p3', function (req, res) {
+  res.render('ctc1000/mariana_p3');
+})
 
 app.get('/ctc1000/yasemin-sarihan', function (req, res) {
   res.render('ctc1000/yasemin');
