@@ -4,26 +4,145 @@
     <meta charset="utf-8">
     <title>Tianyue He</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="/public/assets/style.css"> -->
-    <link rel="stylesheet" type="text/css" href="/views/assets/style.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/views/assets/style_tianyue.css">
   </head>
   <body>
   	<div id="page_artist" class="page">
-	  
-	    <h1><a style="text-decoration:none;color:rgb(0,0,255)" href="/">Tianyue He</a></h1>
-	    <!--<p>the artist is not present</p>-->
+		
+		<div class="post_container">
+			<div class="whole">
+				<div class="left half">
+					<img src="/assets/pic2.png" width="300px">
+				</div>
+				<div class="right half">
+					<p class="project_title">The Shy Sea Anemone</p>
+					<p class="artist_name">Sandra he</p>
+
+					<p class="description">This lamp is a biomimetic kinetic sculpture that interacts with people. Inspired by sea anemones, the lamp expands and contracts. This introverted lamp shakes with anxiety when people approach.</p>
+					<p class="description">Leave it alone then shall it dance on its own.</p>
+					<p class="description">The lamp's form was created using programmatic 3D modeling in Grasshopper and printed on an SLA 3D printer. Interaction was programmed in Arduino and uses an ultrasonic sensor and a servo motor. </p>	
+				</div>
+			</div>
+
+
+
+
+			<div class="container">
+			<h2></h2> 
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+				  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				  <li data-target="#myCarousel" data-slide-to="1"></li>
+				  <li data-target="#myCarousel" data-slide-to="2"></li>
+				  <li data-target="#myCarousel" data-slide-to="3"></li>
+				  <li data-target="#myCarousel" data-slide-to="4"></li>
+				  <li data-target="#myCarousel" data-slide-to="5"></li>
+				  <li data-target="#myCarousel" data-slide-to="6"></li>
+				  <li data-target="#myCarousel" data-slide-to="7"></li>
+				  <li data-target="#myCarousel" data-slide-to="8"></li>
+				  <li data-target="#myCarousel" data-slide-to="9"></li>
+				  <li data-target="#myCarousel" data-slide-to="10"></li>
+				  <li data-target="#myCarousel" data-slide-to="11"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+				  <div class="item active">
+				    <img src="/assets/pic1.png" alt="" style="width:100%">
+				  </div>
+
+				  <div class="item">
+				    <img src="/assets/pic2.png" alt="" style="width:100%">
+				  </div>
+
+				  <div class="item">
+				    <img src="/assets/pic3.png" alt="" style="width:100%">
+				  </div>
+
+				  <div class="item">
+				    <img src="/assets/pic4.png" alt="" style="width:100%">
+				  </div>
+
+				  <div class="item">
+				    <img src="/assets/pic5.png" alt="" style="width:100%">
+				  </div>
+
+				  <div class="item">
+				    <img src="/assets/pic6.png" alt="" style="width:100%">
+				  </div>
+
+				  <div class="item">
+				    <img src="/assets/pic7.png" alt="" style="width:100%">
+				  </div>
+
+				  <div class="item">
+				    <img src="/assets/pic8.png" alt="" style="width:100%">
+				  </div>
+
+				  <div class="item">
+				    <img src="/assets/pic9.png" alt="" style="width:100%">
+				  </div>
+
+				  <div class="item">
+				    <img src="/assets/pic10.png" alt="" style="width:100%">
+				  </div>
+
+				  <div class="item">
+				    <img src="/assets/pic11.png" alt="" style="width:100%">
+				  </div>
+
+				</div>
+
+
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				  <span class="glyphicon glyphicon-chevron-left"></span>
+				  <span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				  <span class="glyphicon glyphicon-chevron-right"></span>
+				  <span class="sr-only">Next</span>
+				</a>
+				</div>
+			</div>
+
+
+
+			<div class="media_container">
+				<video class="media_player" width="640px"  alt="placeholder alt text" controls>
+				  <source src="/assets/vid1.mp4" type="video/mp4">
+				</video>
+			</div>
+
+			<!-- <div class="image_gallery">
+				<img src="/assets/" width="200px">
+				<img src="/assets/" width="200px">
+				<img src="/assets/" width="200px">
+			</div> -->
+
+
+			<div class="media_container">
+				<video class="media_player" width="640px"  alt="placeholder alt text" controls>
+				  <source src="/assets/vid2.mp4" type="video/mp4">
+				</video>
+			</div>
+
+
+
+		</div>
 
 	    
-
+  	<!--
 	    <div id="navContainer">
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/about">ABOUT</a></p>
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc1000">SHOW 1</a></p>
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc3002">SHOW 2</a></p>
-		    <!-- <p class="navItem"><a href="/shows">shows</a></p> -->
-		    <!-- <p class="navItem"><a href="/archive">archive</a></p> -->
-		    <!-- <p class="navItem"><a href="/week6">week 6</a></p> -->
-	    </div>
+		    <p class="navItem"><a style="text-decoration:none;" href="/about"></a>ABOUT</p>
+		    <p class="navItem"><a style="text-decoration:none;" href="/ctc1000"></a>GALLERY 1</p>
+		    <p class="navItem"><a style="text-decoration:none;" href="/ctc3002"></a>GALLERY 2</p>
+	    </div> -->
 	  </div>
   </body>
 </html>
