@@ -1,29 +1,277 @@
-
+<!-- 
 <html>
   <head>
     <meta charset="utf-8">
     <title>Yasemin Sarihan</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="/public/assets/style.css"> -->
     <link rel="stylesheet" type="text/css" href="/views/assets/style.css">
   </head>
   <body>
   	<div id="page_artist" class="page">
 	  
-	    <h1><a style="text-decoration:none;color:rgb(0,0,255)" href="/">Yasemin Sarihan</a></h1>
-	    <!--<p>the artist is not present</p>-->
+	    <h1><a style="text-decoration:none;color:rgb(0,0,255)" href="/">PLACES INSTEAD</a></h1>
 
 	    
 
 	    <div id="navContainer">
 		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/about">ABOUT</a></p>
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc1000">SHOW 1</a></p>
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc3002">SHOW 2</a></p>
-		    <!-- <p class="navItem"><a href="/shows">shows</a></p> -->
-		    <!-- <p class="navItem"><a href="/archive">archive</a></p> -->
-		    <!-- <p class="navItem"><a href="/week6">week 6</a></p> -->
+		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc1000">GALLERY 1</a></p>
+		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc3002">GALLERY 2</a></p>
 	    </div>
 	  </div>
   </body>
+</html> -->
+
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+  <link rel="stylesheet" href="/views/assets/style_yasemin.css">
+</head>
+<style>
+
+
+</style>
+<body>
+
+<div id="p5sketch0" class="p5CanvasElt" alt=""></div>
+
+<script>
+	    const s0 = ( sketch ) => {
+
+			let capture;
+			let count = 0;
+			let button;
+
+		    		
+	    	sketch.setup = () => {
+	    		
+
+				canvas = sketch.createCanvas(1800, 1800);
+
+				canvas.position(0,0);
+				canvas.style('position', 'fixed','z-index:-1');
+				capture = sketch.createCapture(sketch.VIDEO);
+				capture.size(320, 240);
+				capture.hide();
+
+
+
+		    }
+
+	    	sketch.draw = () => {
+	    		
+				sketch.background(255);
+				sketch.image(capture, 0, 0, 320, 240);
+				sketch.textSize(50);
+				sketch.text(count,sketch.mouseX,sketch.mouseY);
+				canvas.mousePressed(incrementCountUp);
+
+			
+	    	};
+
+	    	function incrementCountUp(){
+			  count++;
+			}
+
+		};
+
+	    let myp5_0 = new p5(s0, 'p5sketch0');
+
+	    </script>
+
+  <pre id="p1" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()">
+  username and password do not match.
+
+
+
+
+    the member name and password you entered do not match.
+
+
+
+Please try again.
+
+
+                              404:The requested resource was not found.
+</pre>
+
+
+  <pre id="p2" onmouseenter="mouseEnter1()" onmouseleave="mouseLeave1()">
+                                                                                        Method not allowed.                                                                        Not acceptable response.
+                                                                                                                              Proxy Authentication Required.
+
+                                                                                                                                                                  Expectation Failed.
+Do you accept cookies?
+
+
+
+
+</pre>
+
+<script>
+function mouseEnter() {
+  document.getElementById("p1").style.color = "black";
+}
+
+function mouseLeave() {
+  document.getElementById("p1").style.color = "white";
+}
+
+function mouseEnter1() {
+  document.getElementById("p2").style.color = "black";
+}
+function mouseLeave1() {
+  document.getElementById("p2").style.color = "white";
+}
+
+
+
+</script>
+</body>
+</html>
+
+
+<html>
+  <head>
+    <title>SURVEILLANCE TEST</title>
+
+<style>
+    #blink{
+      font-weight: bold;
+      font-family: sans-serif;
+      color: #;
+      transition:0 s;
+      text-align:center;
+      position: fixed;
+    }
+    .message{
+      color:black;
+      font-size: 40px;
+      font-weight: bold;
+      font-family: sans-serif;
+      text-align:left;
+      position:fixed, top:300px;
+      z-index: 1;
+    }
+    .intro{
+      color:black;
+      font-size: 200px;
+      text-align: left;
+      position:fixed, top:200px;
+      margin-top: 100px;
+      z-index: 1
+    }
+
+   </style>
+
+  </head>
+  <body>
+<div class="intro">
+     <h1 id='blink'>WELCOME</h1>
+</div>
+
+<div class="message">
+     <p id='blink'>screen record your experience</p>
+</div>
+
+    <script type="text/javascript">
+      var blink = document.getElementById('blink');
+      setInterval(function() {
+         blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+      }, 800);
+    </script>
+  </body>
+</html>
+
+<head>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.dom.js"></script>-->
+
+    <link rel="stylesheet" type="text/css" href="/views/assets/style_yasemin.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+     <!-- <script src="script.js"></script> -->
+  </body>
+</html>
+
+
+
+<html>
+<head>
+<style>
+
+
+</style>
+</head>
+<body>
+
+
+<!-- <button onclick="document.location = 'alex.html'">USER</button> -->
+
+
+<a href="#" id="button" onclick="openWin()"> . </a>
+<a href="#" id="button1" onclick="openWin1(),openWin()"> . </a>
+<a href="#" id="button2" onclick="openWin2(), openWin1()"> . </a>
+<a href="#" id="button3" onclick="openWin3()"> . </a>
+<a href="#" id="button4" onclick="openWin4(), openWin2()"> . </a>
+
+<a href="#" id="button5" onclick="openWin5(),openWin6(),openWin7(), openWin8()"> USER DATA</a>
+<!-- <a href="#" id="button6" onclick="openWin6()"> user_2 </a>
+<a href="#" id="button7" onclick="openWin7()"> user_3</a> -->
+
+<script>
+
+var window1;
+var window2;
+var window3;
+var window4;
+var window5;
+var window6;
+var window7;
+var window8;
+// function createCapture(VIDEO){
+
+// }
+
+
+function openWin() {
+  window1 = window.open("", "window1", "width=500,height=300, top=200, left=300, background: yellow");
+  window1.document.write("<h2>TIMEOUT</h2>");
+}
+function openWin1() {
+  window2 = window.open("", "window2", "width=500,height=300, top=10, left=960, background: yellow");
+  window2.document.write("<h2>PAGE NOT FOUND</h2>");
+}
+function openWin2() {
+  window3 = window.open("", "window3", "width=400,height=200, background: black");
+  window3.document.write("<h1>HELLO</h1>");
+}
+function openWin3() {
+  window4 = window.open("", "window4", "width=400,height=320, background: yellow");
+  window4.document.write("<h1>YOU ARE USER 7</h1>");
+}
+function openWin4() {
+  window5 = window.open("", "window5", "width=600,height=800");
+  window5.document.write("<h1> 403:Access to that resource is forbidden.</h1>");
+}
+function openWin5() {
+  window6 = window.open("/assets/alex.html", "window6", "width=640,height=480,top=40, left=800");
+}
+function openWin6() {
+  window7 = window.open("/assets/vero.html", "window7", "width=640,height=480,top=100, left=200");
+}
+function openWin7() {
+  window8 = window.open("/assets/aysesu.html", "window8", "width=640,height=480,top=500, left=800");
+}
+function openWin8() {
+  window9 = window.open("/assets/selin.html", "window9", "width=640,height=480,top=400, left=140");
+}
+</script>
+
+</body>
 </html>
