@@ -1,0 +1,103 @@
+body {
+	font-family: 'Inconsolata', monospace;
+	background: lightgrey;
+	color: rgb(0, 0, 255);
+}
+
+h1 {
+	margin: 0px;
+}
+
+#canvasContainer {
+	width: 100%;
+}
+
+#navContainer {
+	width: 100%;
+}
+
+.navItem {
+	display: inline-block;
+	margin: 5px;
+	margin-top: 10px;
+}
+
+.navItem a {
+	text-decoration: none;
+}
+
+.project_title {
+	/*margin-top: 50px;
+	margin-left: 50px;
+	margin-bottom: -10px;*/
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.artist_name {
+	margin-left: 50px;
+	margin-bottom: 25px;
+}
+
+
+
+#paste-div {
+	background: #AFEC73;
+}
+
+div#paste-div {
+  font-size: 5em;
+  margin: auto;
+  display: block;
+  text-align: center;
+  color: #000000;
+  padding: 14%;
+  font-family: 'VT323', monospace;
+}
+div#paste-div img#download {
+  /*width: 10%;
+  position: absolute;
+  left: 45%;
+  top: 47%;*/
+  width: 200px;
+}
+#link {
+  margin: auto;
+  display: inline-block;
+  font-size: .45em;
+  text-decoration: underline;
+  color: #000000;
+  padding: 2%;
+}
+#link:hover {
+  margin: auto;
+  display: inline-block;
+  font-size: 0.45em;
+  text-decoration: underline;
+  color: #0000000;
+  padding: 2%;
+}
+
+/*.post_container {
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+}*/
+
+.post_container {
+	display: inline-block;
+	text-align: center;
+	width: 1100px;
+}
+
+.project_container {
+	text-align: left;
+	display: inline-block;
+	width: 500px;
+	height: 100%;
+	/*border: 2px dashed blue;*/
+	/*margin: 25px;*/
+	padding: 10px;
+	overflow: hidden;
+
+}
