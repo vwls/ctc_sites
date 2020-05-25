@@ -5,11 +5,11 @@ body {
 	color: rgb(0, 0, 255);
 }
 
-@media screen and (max-width: 480px) {
+/*@media screen and (max-width: 780px) {
   body {
-    color: black;
+    background-color: grey;
   }
-}
+}*/
 
 
 
@@ -99,6 +99,17 @@ h1 {
 
 #page_home .sub {
 	margin-top: 5px;
+}
+
+@media screen and (max-width: 780px) {
+  #page_home .text_container {
+    background-color: grey;
+    padding: 10px;
+  }
+}
+
+#page_home h1 {
+	color: white;
 }
 
 /*#page_home #p5sketch0 {
