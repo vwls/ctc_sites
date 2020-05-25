@@ -47,11 +47,8 @@ body {
 	text-align: center;
 	height: 300px;
 	display: inline-block;
-	/*margin-right: 30px;
-	margin-top: 30px;*/
-	/*border: 1px solid blue;*/
 	width: 300px;
-	float: left;
+	/*float: left;*/
 	margin: 15px;
 }
 
@@ -61,5 +58,9 @@ body {
 
 .image_container .inner video {
 	/*margin: 15px;*/
+}
+
+.caption {
+	display: block;
 }
 
