@@ -3,27 +3,56 @@
   <head>
     <meta charset="utf-8">
     <title>Maggie Guo</title>
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="/public/assets/style.css"> -->
-    <link rel="stylesheet" type="text/css" href="/views/assets/style.css">
+    <link rel="stylesheet" type="text/css" href="/views/assets/style_maggie.css">
   </head>
   <body>
   	<div id="page_artist" class="page">
-	  
-	    <h1><a style="text-decoration:none;color:rgb(0,0,255)" href="/">Maggie Guo</a></h1>
-	    <!--<p>the artist is not present</p>-->
-
-	    
 
 	    <div id="navContainer">
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/about">ABOUT</a></p>
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc1000">SHOW 1</a></p>
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc3002">SHOW 2</a></p>
-		    <!-- <p class="navItem"><a href="/shows">shows</a></p> -->
-		    <!-- <p class="navItem"><a href="/archive">archive</a></p> -->
-		    <!-- <p class="navItem"><a href="/week6">week 6</a></p> -->
+		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,0)" href="/ctc1000">Gallery 1</a></p>
+		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,0)" href="/ctc3002">Gallery 2</a></p>
+		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,0)" href="/about">About</a></p>
 	    </div>
+
+	    <div class="header_image">
+	    	<img src="/assets/cap.gif" width="100%">
+	    </div>
+
+	    <p class="header_text">CONGRATS YOU GRADUATED!</p>
+	    <p class="sub_header">I created an AR project that recognizes a RISD ID card and overlays a graduation cap</p>
+
+	    <center> <video width="600" autoplay controls>
+		  <source src="/assets/ID_final.mp4" type="video/mp4">
+		</video>
+
+		<p class="header_text">PROCESS</p>
+	    <p class="sub_header">I created the project in Unity, and used Vuforia to implement image recognition</p>
+	    <p class="sub_header">To best implement image recognition, I uploaded different formats of<br> my RISD ID to the data base, and tested how well each worked using a cube.</p>
+
+	    <div class="image_container">
+	    	<div class="inner"><img src="/assets/ID.JPG"><span>Test 1: full ID unaltered (without the stickers)</span></div>
+	    	<div class="inner"><img src="/assets/ID_cut_out.png"><span>Test 2: png with face and info cut out</span></div>
+			<div class="inner"><img src="/assets/ID_cropped.JPG"><span>Test 3: cropped ID</span></div>
+			<div class="inner">
+				<video width="275" controls>
+			  		<source src="/assets/ID_final.mp4" type="video/mp4">
+				</video>
+				<span>can detect and track the image</span>
+			</div>
+			<div class="inner">
+				<video width="275" controls>
+			  		<source src="/assets/ID_final.mp4" type="video/mp4">
+				</video>
+				<span>takes a long time to detect the image, and tracking is choppy</span>
+			</div>
+			<div class="inner">
+				<video width="275" controls>
+			  		<source src="/assets/ID_final.mp4" type="video/mp4">
+				</video>
+				<span>can detect the image, but has trouble tracking movements across space</span>
+			</div>
+	    </div>
+
 	  </div>
   </body>
 </html>

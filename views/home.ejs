@@ -22,8 +22,8 @@
   <body>
   	<div id="page_home" class="page">
 	  
-	    <h1><a style="text-decoration:none;color:rgb(0,0,255)" href="/">PLACES INSTEAD</a></h1>
-	    <p>the artist is not present</p>
+	    <h1><a style="text-decoration:none;color:rgb(255,255,255)" href="/">PLACES INSTEAD</a></h1>
+	    <p style="color:rgb(255,255,255)">the artist is not present</p>
 
 	    <div class="canvasContainer">
 		    <div id="p5sketch0" class="p5CanvasElt" alt="a generative artwork. a fine blue line scribbles across a white field. this same artwork will never be created again."></div>
@@ -40,15 +40,28 @@
 			let y;
 			let px;
 			let py;
-			let magnitude = 5;
+			let magnitude = 15;
+			let clicked = false;
+			// let opacity = 0;
+			// let increase = 10;
+			let canvas;
 		    		
 	    	sketch.setup = () => {
-	    		sketch.createCanvas(300, 300);
+	    		canvas = sketch.createCanvas(300, 200);
+
+	    		canvas.position(0, 0);
+			  	canvas.style('z-index',  '-1');
+
 	    		sketch.background(255);
 				sketch.stroke(0, 0, 255);
+				sketch.strokeWeight(25);
 				
 				x = sketch.width/2;
 				y = sketch.height/2;
+				x=0;
+				y=0;
+
+				console.log(sketch.floor(sketch.random(0,100)));
 
 				// Canvas boundaries
 				//sketch.drawingContext.setLineDash(dashDist);
@@ -58,6 +71,10 @@
 	    	}
 
 	    	sketch.draw = () => {
+	    		// opacity += increase;
+
+	    		// sketch.stroke(0, 0, 255, opacity);
+
 			    px = x;
 				py = y;
 
@@ -66,8 +83,41 @@
 
 				sketch.line(px, py, x, y);
 
+				// sketch.line(px, py, x * -1, y * -1);
+
+				// sketch.line(px +20, py +20, x+10, y+10);
+
+				//sketch.ellipse(sketch.mouseX, sketch.mouseY, 20, 20);
+
+				sketch.line(sketch.pmouseX, sketch.pmouseY, sketch.mouseX, sketch.mouseY);
+
+				// sketch.line(sketch.floor(sketch.random(0,800)), sketch.floor(sketch.random(0,800)), x, y);
+
+				if(x >= sketch.width){
+					x -= (magnitude *2); 
+				} else if(x <= 0){
+					x += (magnitude * 2);
+				}
+
+
+				if(y >= sketch.height){
+					y -= (magnitude *2); 
+				} else if(y <= 0){
+					y += (magnitude * 2);
+				}
+
 				
 			};
+
+			sketch.mousePressed = () => {
+				
+				x = sketch.mouseX;
+				y = sketch.mouseY;
+				//sketch.stroke(sketch.random(25, 150), sketch.random(25, 150), 200);
+			}
+
+
+			
 	    };
 
 	    //let myp5_0 = new p5(s0);
@@ -75,7 +125,7 @@
 
 	    </script>
 
-	    <script>
+	    <script>/*
 	    const s1 = ( sketch ) => {
 
 	    	//let dashDist = [5, 5];
@@ -115,9 +165,10 @@
 
 	    //let myp5_1 = new p5(s1);
 	    let myp5_1 = new p5(s1, 'p5sketch1');
+	    */
 	    </script>
 
-	    <script>
+	    <script> /*
 	    const s2 = ( sketch ) => {
 
 	    	//let dashDist = [5, 5];
@@ -157,13 +208,14 @@
 
 	    //let myp5_2 = new p5(s2);
 	    let myp5_2 = new p5(s2, 'p5sketch2');
+	    */
 	    </script>
 
 
 	    <div id="navContainer">
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/about">ABOUT</a></p>
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc1000">AFTERIMAGES: GALLERY 1</a></p>
-		    <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc3002">AFTERIMAGES: GALLERY 2</a></p>
+		    <p class="navItem"><a style="text-decoration:underline;color:rgb(255,255,255)" href="/about">ABOUT</a></p>
+		    <p class="navItem"><a style="text-decoration:underline;color:rgb(255,255,255)" href="/ctc1000">GALLERY 1</a></p>
+		    <p class="navItem"><a style="text-decoration:underline;color:rgb(255,255,255)" href="/ctc3002">GALLERY 2</a></p>
 		    <!-- <p class="navItem"><a href="/shows">shows</a></p> -->
 		    <!-- <p class="navItem"><a href="/archive">archive</a></p> -->
 		    <!-- <p class="navItem"><a href="/week6">week 6</a></p> -->
