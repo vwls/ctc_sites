@@ -21,15 +21,26 @@
   </head>
   <body>
   	<div id="page_home" class="page">
-	  
-	    <h1><a style="text-decoration:none;color:rgb(255,255,255)" href="/">PLACES INSTEAD</a></h1>
-	    <p style="color:rgb(255,255,255)">the artist is not present</p>
+	  	
+	  	<div class="text_container">
+		    <h1 style="color:rgb(255,255,255)">PLACES INSTEAD</h1>
+		    <p class="sub"style="color:rgb(255,255,255)">the artist is not present</p>
+
+		    <div id="navContainer">
+		    <p class="navItem"><a style="text-decoration:underline;color:rgb(255,255,255)" href="/about">ABOUT</a></p>
+		    <p class="navItem"><a style="text-decoration:underline;color:rgb(255,255,255)" href="/ctc1000">GALLERY 1</a></p>
+		    <p class="navItem"><a style="text-decoration:underline;color:rgb(255,255,255)" href="/ctc3002">GALLERY 2</a></p>
+		    <!-- <p class="navItem"><a href="/shows">shows</a></p> -->
+		    <!-- <p class="navItem"><a href="/archive">archive</a></p> -->
+		    <!-- <p class="navItem"><a href="/week6">week 6</a></p> -->
+	    </div>
+	    </div>
 
 	    <div class="canvasContainer">
-		    <div id="p5sketch0" class="p5CanvasElt" alt="a generative artwork. a fine blue line scribbles across a white field. this same artwork will never be created again."></div>
-		    <div id="p5sketch1" class="p5CanvasElt" alt="a generative artwork. a fine blue line scribbles across a white field. this same artwork will never be created again."></div>
-		    <div id="p5sketch2" class="p5CanvasElt" alt="a generative artwork. a fine blue line scribbles across a white field. this same artwork will never be created again."></div>
-	    </div>
+			    <div id="p5sketch0" class="p5CanvasElt" alt="a generative artwork. a fat blue line scribbles across a white field. it reveals the name of the gallery and navigation links that, written in white, were otherwise invisible. this same artwork will never be created again."></div>
+			   <!--  <div id="p5sketch1" class="p5CanvasElt" alt="a generative artwork. a fine blue line scribbles across a white field. this same artwork will never be created again."></div>
+			    <div id="p5sketch2" class="p5CanvasElt" alt="a generative artwork. a fine blue line scribbles across a white field. this same artwork will never be created again."></div> -->
+		    </div>
 
 	    <script>
 	    const s0 = ( sketch ) => {
@@ -40,28 +51,42 @@
 			let y;
 			let px;
 			let py;
-			let magnitude = 15;
-			let clicked = false;
-			// let opacity = 0;
-			// let increase = 10;
+
+			let magnitude = 25;
+
+			// let windowWidth = 1200;
+			// let windowHeight = 1000;
+
+			let windowWidth = sketch.displayWidth;
+			let windowHeight = sketch.displayHeight;
+
+			let bounds = {
+				"width": 400,
+				"height": 200
+			}
 			let canvas;
 		    		
 	    	sketch.setup = () => {
-	    		canvas = sketch.createCanvas(300, 200);
+	    		canvas = sketch.createCanvas(windowWidth, windowHeight);
 
 	    		canvas.position(0, 0);
 			  	canvas.style('z-index',  '-1');
 
 	    		sketch.background(255);
 				sketch.stroke(0, 0, 255);
-				sketch.strokeWeight(25);
+				sketch.strokeWeight(45);
 				
-				x = sketch.width/2;
-				y = sketch.height/2;
-				x=0;
-				y=0;
+				x = windowWidth/2;
+				y = windowHeight/2;
 
-				console.log(sketch.floor(sketch.random(0,100)));
+				//sketch.rect(windowWidth/2 - bounds.width/2, windowHeight/2 - bounds.height/2, bounds.width, bounds.height);
+
+				// sketch.strokeWeight(2);
+				// sketch.textSize(50);
+				// sketch.text('test', 200, 200);
+				// sketch.strokeWeight(25);
+
+				// console.log(sketch.floor(sketch.random(0,100)));
 
 				// Canvas boundaries
 				//sketch.drawingContext.setLineDash(dashDist);
@@ -75,6 +100,8 @@
 
 	    		// sketch.stroke(0, 0, 255, opacity);
 
+	    		let offset = sketch.floor(sketch.random(0,100));
+
 			    px = x;
 				py = y;
 
@@ -82,6 +109,8 @@
 				y += sketch.random(magnitude * -1, magnitude);
 
 				sketch.line(px, py, x, y);
+				sketch.line(px - offset, py - offset, x - offset, y - offset);
+				sketch.line(px + offset, py + offset, x + offset, y + offset);
 
 				// sketch.line(px, py, x * -1, y * -1);
 
@@ -89,20 +118,19 @@
 
 				//sketch.ellipse(sketch.mouseX, sketch.mouseY, 20, 20);
 
-				sketch.line(sketch.pmouseX, sketch.pmouseY, sketch.mouseX, sketch.mouseY);
-
 				// sketch.line(sketch.floor(sketch.random(0,800)), sketch.floor(sketch.random(0,800)), x, y);
 
-				if(x >= sketch.width){
-					x -= (magnitude *2); 
-				} else if(x <= 0){
+				// Keep the walker inside the fence
+				if(x >= windowWidth/2 + bounds.width/2){
+					x -= (magnitude * 2); 
+				} else if(x <= windowWidth/2 - bounds.width/2){
 					x += (magnitude * 2);
 				}
 
 
-				if(y >= sketch.height){
-					y -= (magnitude *2); 
-				} else if(y <= 0){
+				if(y >= windowHeight/2 + bounds.height/2){
+					y -= (magnitude * 2); 
+				} else if(y <= windowHeight/2 - bounds.height/2){
 					y += (magnitude * 2);
 				}
 
@@ -114,7 +142,15 @@
 				x = sketch.mouseX;
 				y = sketch.mouseY;
 				//sketch.stroke(sketch.random(25, 150), sketch.random(25, 150), 200);
-			}
+			};
+
+			sketch.mouseDragged = () => {
+				sketch.line(sketch.pmouseX, sketch.pmouseY, sketch.mouseX, sketch.mouseY);
+			};
+
+			// sketch.windowResized = () => {
+			// 	sketch.resizeCanvas(sketch.windowWidth, sketch.windowHeight);
+			// };
 
 
 			
@@ -212,14 +248,7 @@
 	    </script>
 
 
-	    <div id="navContainer">
-		    <p class="navItem"><a style="text-decoration:underline;color:rgb(255,255,255)" href="/about">ABOUT</a></p>
-		    <p class="navItem"><a style="text-decoration:underline;color:rgb(255,255,255)" href="/ctc1000">GALLERY 1</a></p>
-		    <p class="navItem"><a style="text-decoration:underline;color:rgb(255,255,255)" href="/ctc3002">GALLERY 2</a></p>
-		    <!-- <p class="navItem"><a href="/shows">shows</a></p> -->
-		    <!-- <p class="navItem"><a href="/archive">archive</a></p> -->
-		    <!-- <p class="navItem"><a href="/week6">week 6</a></p> -->
-	    </div>
+	    
 	  </div>
   </body>
 </html>
