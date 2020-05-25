@@ -30,34 +30,34 @@ app.listen(port, () => console.log(`App listening on port ${port}`));
 // ROUTES
 
 // Home page routes
-// COMMENTING THESE OUT FOR NOW FOR PRESHOW BEHAVIOR
-// app.get('/index', function (req, res) {
-//   res.render('home');
-// })
-
-// app.get('/', function (req, res) {
-//   res.render('home');
-// })
-
-// app.get('/home', function (req, res) {
-//   res.render('home');
-// })
-
+// COMMENTING THESE OUT FOR PRESHOW BEHAVIOR
 app.get('/index', function (req, res) {
-  res.render('preshow');
+  res.render('home');
 })
 
 app.get('/', function (req, res) {
-  res.render('preshow');
+  res.render('home');
 })
 
 app.get('/home', function (req, res) {
-  res.render('preshow');
-})
-
-app.get('/main', function (req, res) {
   res.render('home');
 })
+
+// app.get('/index', function (req, res) {
+//   res.render('preshow');
+// })
+
+// app.get('/', function (req, res) {
+//   res.render('preshow');
+// })
+
+// app.get('/home', function (req, res) {
+//   res.render('preshow');
+// })
+
+// app.get('/main', function (req, res) {
+//   res.render('home');
+// })
 
 
 // Other page routes
