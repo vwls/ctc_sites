@@ -1,8 +1,16 @@
+@media screen and (min-width: 480px) {
+  body {
+    background-color: grey;
+  }
+}
+
 body {
 	font-family: 'Inconsolata', monospace;
 	background: white;
 	color: rgb(0, 0, 255);
 }
+
+
 
 h1 {
 	margin: 0px;
