@@ -38,8 +38,6 @@
 
 	    <div class="canvasContainer">
 			    <div id="p5sketch0" class="p5CanvasElt" alt="a generative artwork. a fat blue line scribbles across a white field. it reveals the name of the gallery and navigation links that, written in white, were otherwise invisible. this same artwork will never be created again."></div>
-			   <!--  <div id="p5sketch1" class="p5CanvasElt" alt="a generative artwork. a fine blue line scribbles across a white field. this same artwork will never be created again."></div>
-			    <div id="p5sketch2" class="p5CanvasElt" alt="a generative artwork. a fine blue line scribbles across a white field. this same artwork will never be created again."></div> -->
 		    </div>
 
 	    <script>
@@ -54,9 +52,6 @@
 
 			let magnitude = 25;
 
-			// let windowWidth = 1200;
-			// let windowHeight = 1000;
-
 			let windowWidth = sketch.displayWidth;
 			let windowHeight = sketch.displayHeight;
 
@@ -64,6 +59,7 @@
 				"width": 400,
 				"height": 200
 			}
+
 			let canvas;
 		    		
 	    	sketch.setup = () => {
@@ -141,7 +137,7 @@
 				
 				x = sketch.mouseX;
 				y = sketch.mouseY;
-				//sketch.stroke(sketch.random(25, 150), sketch.random(25, 150), 200);
+				sketch.stroke(sketch.random(25, 150), sketch.random(25, 150), 200);
 			};
 
 			sketch.mouseDragged = () => {
@@ -161,94 +157,6 @@
 
 	    </script>
 
-	    <script>/*
-	    const s1 = ( sketch ) => {
-
-	    	//let dashDist = [5, 5];
-
-			let x;
-			let y;
-			let px;
-			let py;
-			let magnitude = 5;
-		    		
-	    	sketch.setup = () => {
-	    		sketch.createCanvas(300, 300);
-	    		sketch.background(255);
-				sketch.stroke(0, 0, 255);
-				
-				x = sketch.width/2;
-				y = sketch.height/2;
-
-				// Canvas boundaries
-				//sketch.drawingContext.setLineDash(dashDist);
-				//sketch.rect(0, 0, sketch.width, sketch.height);
-				// Reset to non-dashed line
-				//sketch.drawingContext.setLineDash([0, 0]);
-
-	    	}
-
-	    	sketch.draw = () => {
-			    px = x;
-				py = y;
-
-				x += sketch.random(magnitude * -1, magnitude);
-				y += sketch.random(magnitude * -1, magnitude);
-
-				sketch.line(px, py, x, y);
-			};
-	    };
-
-	    //let myp5_1 = new p5(s1);
-	    let myp5_1 = new p5(s1, 'p5sketch1');
-	    */
-	    </script>
-
-	    <script> /*
-	    const s2 = ( sketch ) => {
-
-	    	//let dashDist = [5, 5];
-
-			let x;
-			let y;
-			let px;
-			let py;
-			let magnitude = 5;
-		    		
-	    	sketch.setup = () => {
-	    		sketch.createCanvas(300, 300);
-	    		sketch.background(255);
-				sketch.stroke(0, 0, 255);
-				
-				x = sketch.width/2;
-				y = sketch.height/2;
-
-				// Canvas boundaries
-				//sketch.drawingContext.setLineDash(dashDist);
-				//sketch.rect(0, 0, sketch.width, sketch.height);
-				// Reset to non-dashed line
-				//sketch.drawingContext.setLineDash([0, 0]);
-
-	    	}
-
-	    	sketch.draw = () => {
-			    px = x;
-				py = y;
-
-				x += sketch.random(magnitude * -1, magnitude);
-				y += sketch.random(magnitude * -1, magnitude);
-
-				sketch.line(px, py, x, y);
-			};
-	    };
-
-	    //let myp5_2 = new p5(s2);
-	    let myp5_2 = new p5(s2, 'p5sketch2');
-	    */
-	    </script>
-
-
-	    
 	  </div>
   </body>
 </html>

@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>ctc-1000</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
     <link rel="stylesheet" type="text/css" href="/views/assets/style.css">
   </head>
   <body>
@@ -42,68 +41,10 @@
 
         
 
-        <div class="canvasContainer">
-    	    <!-- <div id="p5sketch0" class="p5Canvas"></div>
-    	    <div id="p5sketch1" class="p5Canvas"></div>
-    	    <div id="p5sketch2" class="p5Canvas"></div> -->
-
-        <!--
-          <div id="image0" class="p5Canvas"><img src="/assets/blueprint1.jpg" alt="some alt text" width="360px" height="270px"></div>
-
-            <div id="image1" class="p5Canvas"><img src="/assets/blueprint2.jpg" alt="some alt text" width="360px" height="270px"></div>
-
-            <div id="image2" class="p5Canvas"><img src="/assets/blueprint3.jpg" alt="some alt text" width="360px" height="270px"></div>
-
-            <div id="image3" class="p5Canvas"><img src="/assets/blueprint4.jpg" alt="some alt text" width="360px" height="270px"></div>
-
-            <div id="image4" class="p5Canvas"><img src="/assets/blueprint5.jpg" alt="some alt text" width="360px" height="270px"></div>
-
-            <div id="image5" class="p5Canvas"><img src="/assets/blueprint6.jpg" alt="some alt text" width="360px" height="270px"></div>
-
-            <div id="image6" class="p5Canvas"><img src="/assets/blueprint7.jpg" alt="some alt text" width="360px" height="270px"></div>
-        </div> 
-        -->
-
-        <!-- FIRST CANVAS -->
-        <script>
-        // This block of code creates a canvas element that contains
-        // a grayscale live video capture
-        const s0 = ( sketch ) => {
-
-        	let capture;
-
-        	let dashDist = [5, 5];
-    	    		
-        	sketch.setup = () => {
-        		sketch.createCanvas(300, 300);
-        		sketch.background(255);
-    			sketch.stroke(0, 0, 255);
-
-    			//capture = sketch.createCapture(sketch.VIDEO);
-      			//capture.hide();
-        	}
-
-        	sketch.draw = () => {
-
-        		//sketch.image(capture, 0, 0, sketch.width, sketch.width * capture.height / capture.width);
-        		
-                //sketch.image(capture, 0, 0, sketch.width, 300);
-      			//sketch.filter(sketch.GRAY);
-        	
-    		};
-        };
-
-        let myp5_0 = new p5(s0, 'p5sketch0');
-
-        </script>
-
         <div id="navContainer">
             <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/about">ABOUT</a></p>
-            <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc1000">AFTERIMAGES: GALLERY 1</a></p>
-            <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc3002">AFTERIMAGES: GALLERY 2</a></p>
-            <!-- <p class="navItem"><a href="/shows">shows</a></p> -->
-            <!-- <p class="navItem"><a href="/archive">archive</a></p> -->
-            <!-- <p class="navItem"><a href="/week6">week 6</a></p> -->
+            <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc1000">GALLERY 1</a></p>
+            <p class="navItem"><a style="text-decoration:none;color:rgb(0,0,255)" href="/ctc3002">GALLERY 2</a></p>
         </div>
     </div>
   </body>
