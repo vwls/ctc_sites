@@ -62,7 +62,11 @@ app.get('/home', function (req, res) {
 
 // Other page routes
 app.get('/shows', function (req, res) {
-  res.render('shows');
+  res.render('current');
+})
+
+app.get('/current', function (req, res) {
+  res.render('current');
 })
 
 app.get('/archive', function (req, res) {
@@ -85,7 +89,20 @@ app.get('/ctc3002', function (req, res) {
   res.render('ctc3002');
 })
 
-// Alternate design page
+app.get('/ctc2000', function (req, res) {
+  res.render('ctc2000');
+})
+
+app.get('/ctc3001', function (req, res) {
+  res.render('ctc3001');
+})
+
+app.get('/dm2132', function (req, res) {
+  res.render('dm2132');
+})
+
+
+// Alternate page design
 app.get('/alt', function (req, res) {
   res.render('alt');
 })
@@ -213,6 +230,135 @@ app.get('/ctc3002/madison-sheldon', function (req, res) {
 app.get('/ctc3002/kai-stewart', function (req, res) {
   res.render('ctc3002/kai');
 })
+
+
+// Individual artist pages for show 3 (dm2132)
+app.get('/dm2132/kyros-barton', function (req, res) {
+  res.render('dm2132/kyros');
+})
+
+app.get('/dm2132/zhanyi-chen', function (req, res) {
+  res.render('dm2132/zhanyi');
+})
+
+app.get('/dm2132/wen-yu-du', function (req, res) {
+  res.render('dm2132/du');
+})
+
+app.get('/dm2132/chang-hong', function (req, res) {
+  res.render('dm2132/chang');
+})
+
+app.get('/dm2132/kathryn-jarvinen', function (req, res) {
+  res.render('dm2132/kat');
+})
+
+app.get('/dm2132/kai-ji', function (req, res) {
+  res.render('dm2132/kai');
+})
+
+app.get('/dm2132/zixin-li', function (req, res) {
+  res.render('dm2132/zixin');
+})
+
+app.get('/dm2132/yuhan-ma', function (req, res) {
+  res.render('dm2132/yuhan');
+})
+
+app.get('/dm2132/jack-madden', function (req, res) {
+  res.render('dm2132/jack');
+})
+
+app.get('/dm2132/nupoor-maduskar', function (req, res) {
+  res.render('dm2132/nupoor');
+})
+
+app.get('/dm2132/shelby-shaw', function (req, res) {
+  res.render('dm2132/shelby');
+})
+
+app.get('/dm2132/travess-smalley', function (req, res) {
+  res.render('dm2132/travess');
+})
+
+// Individual artist pages for show 4 (ctc3001)
+app.get('/ctc3001/elena-bremner', function (req, res) {
+  res.render('ctc3001/elena');
+})
+
+app.get('/ctc3001/maya-campbell', function (req, res) {
+  res.render('ctc3001/maya');
+})
+
+app.get('/ctc3001/hyeju-cho', function (req, res) {
+  res.render('ctc3001/hyeju');
+})
+
+app.get('/ctc3001/isa', function (req, res) {
+  res.render('ctc3001/isa');
+})
+
+app.get('/ctc3001/qian-xi-luo', function (req, res) {
+  res.render('ctc3001/qian');
+})
+
+app.get('/ctc3001/yi-yang', function (req, res) {
+  res.render('ctc3001/yi');
+})
+
+app.get('/ctc3001/soeun-yoon', function (req, res) {
+  res.render('ctc3001/soeun');
+})
+
+// Individual artist pages for show 5 (ctc2000)
+app.get('/ctc2000/aishwarya-bagaria', function (req, res) {
+  res.render('ctc2000/aishwarya');
+})
+
+app.get('/ctc2000/elena-bremner', function (req, res) {
+  res.render('ctc2000/elena');
+})
+
+app.get('/ctc2000/maya-campbell', function (req, res) {
+  res.render('ctc2000/maya');
+})
+
+app.get('/ctc2000/maggie', function (req, res) {
+  res.render('ctc2000/maggie');
+})
+
+app.get('/ctc2000/indrashish', function (req, res) {
+  res.render('ctc2000/indrashish');
+})
+
+app.get('/ctc2000/juyun', function (req, res) {
+  res.render('ctc2000/juyun');
+})
+
+app.get('/ctc2000/xinyi', function (req, res) {
+  res.render('ctc2000/xinyi');
+})
+
+app.get('/ctc2000/yujin-hwang', function (req, res) {
+  res.render('ctc2000/yujin');
+})
+
+app.get('/ctc2000/katrina-machado', function (req, res) {
+  res.render('ctc2000/katrina');
+})
+
+app.get('/ctc2000/mariana-ramos-ortiz', function (req, res) {
+  res.render('ctc2000/mariana');
+})
+
+app.get('/ctc2000/owen-wang', function (req, res) {
+  res.render('ctc2000/owen');
+})
+
+app.get('/ctc2000/shuyuan-zheng', function (req, res) {
+  res.render('ctc2000/shuyuan');
+})
+
 
 
 
